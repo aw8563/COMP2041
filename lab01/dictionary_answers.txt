@@ -17,17 +17,17 @@ Q1 answer: egrep "lmn" dictionary.txt
 
 2) Write a shell pipeline  that prints the words that contain "zz", but do not end in apostrophe-s ('s)?
 
-Q2 answer: egrep "zz" dictionary.txt | egrep "[^']$"
+Q2 answer: egrep "zz" dictionary.txt | egrep "[^'].$"
 
 
 3) Write an egrep command that prints the words that contain four consecutive vowels?
 
-Q3 answer: egrep "[aeiou]{4}" dictionary.txt
+Q3 answer: egrep -i "[aeiou]{4}" dictionary.txt
 
 
 4) Write an egrep command that prints words which contain all 5 vowels "aeiou" in that order?
 
-Q4 answer: egrep "a[.*]e.*i.*o.*u" dictionary.txt
+Q4 answer: egrep "a.*e.*i.*o.*u" dictionary.txt
 
 
 5) Write an egrep command that prints which contain the vowels "aeiou" in that order
