@@ -1,3 +1,4 @@
+#!/bin/sh
 while read numbers; do
-	echo $numbers | tr "[1-4]" "<" | tr "[6-9]" ">"
+	echo $numbers | tr "[0-4]" "<" | tr "[6-9]" ">"
 done
