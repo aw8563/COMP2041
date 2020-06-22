@@ -5,5 +5,5 @@ for file in "$@"; do
 	
 	echo $file $date
 
-	convert -gravity south -pointsize 36 -draw "text 0,10 'Andrew rocks'" $file $file 
+	convert -gravity south -pointsize 36 -draw "text 0,10 '$date'" $file $file 
 done
