@@ -1,6 +1,6 @@
 #!/bin/dash
 if [ ! -d ".shrug" ]; then
-	# echo "Not a repository. Call shrug-init"
+	echo "shrug-add: error: no .shrug directory containing shrug repository exists"
 	exit 1
 fi
 path=".shrug/$(cat .shrug/_branch)"
@@ -8,7 +8,7 @@ path=".shrug/$(cat .shrug/_branch)"
 for file in "$@"; do
 	# if the file doesn't exist in current directory, ignore it
 	if [ ! -f "$file" ]; then
-		# echo "'$file' does not exist"
+		echo "shrug-add: error: can not open '$file'"
 		continue
 	fi
 
