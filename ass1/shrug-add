@@ -12,11 +12,17 @@ for file in "$@"; do
 		continue
 	fi
 
+
 	# if we are already tracking this file, do not create new direcotry for it
 	if [ ! -d "$path/$file" ]; then
 		mkdir "$path/$file"
-		# echo "'$file' is now being tracked"
 	fi
+
+        if [ -f "$path/$file/latest" ]; then
+                if cmp -s "$file" "$path/$file/latest"; then
+                        continue
+                fi
+        fi
 
 	# update latest changes
 	cp "$file" "$path/$file/staged"
