@@ -1,0 +1,21 @@
+#!/bin/dash
+
+# check cwd is a repo
+if [ ! -d ".shrug" ]; then
+	echo "Not a repository. Call shrug-init"
+	exit 1
+fi
+
+path=".shrug/$(cat .shrug/_branch)"
+
+arg=$1
+
+commit=$(echo $arg | cut -d ":" -f1)
+file=$(echo $arg | cut -d ":" -f2)
+
+# if commit is not provided, take the current staged file
+if [ -z "$commit" ]; then
+	cat "$path/$file/$file"
+else # use the commit index instead
+	cat "$path/$file/$commit.$file"
+fi

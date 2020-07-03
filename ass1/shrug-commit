@@ -9,6 +9,16 @@ fi
 path=".shrug/$(cat .shrug/_branch)"
 msg=$2
 
+if [ -z "$msg" ]; then
+	msg="dummy msg"
+fi
+
+
+# commit number
+n=$(wc -l $path/_commits | cut -d " " -f1)
+
+found=0
+
 for file in $(ls $path/ | cat); do
 
 	# only consider directories
@@ -18,14 +28,18 @@ for file in $(ls $path/ | cat); do
 
 	# changes have been STAGED for commit via shrug-add
 	if [ -f $path/$file/$file ]; then
+		found=1
 		echo "Commiting file '$file'"
-		#
+		# create backup
+		mv $path/$file/$file $path/$file/$n.$file
 	else
 		echo "No changes to file '$file'"
 	fi
 done
 
-# commit number
-n=$(wc -l $path/_commits | cut -d " " -f1)
-
-# echo "$n:$msg" >> $path/_commits
+if [ $found -ne 0 ]; then
+	echo "$n $msg" >> $path/_commits
+	echo "Commited as commit $n"
+else
+	echo "No changes to be commited"
+fi
