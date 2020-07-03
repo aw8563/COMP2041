@@ -1,0 +1,10 @@
+ASSIGNMENT DIARY
+
+3rd July: 12pm - 5pm
+- Started the assignment. 
+- Looked through assignment specs.
+- Designed rough skeleton of how the .shrug directory should be structured.
+- Coding & debugging. Finished all of subset 0
+
+
+
