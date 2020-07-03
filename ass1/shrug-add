@@ -1,4 +1,8 @@
 #!/bin/dash
+if [ ! -d ".shrug" ]; then
+	echo "Not a repository. Call shrug-init"
+	exit 1
+fi
 
 path=".shrug/$(cat .shrug/_branch)"
 
