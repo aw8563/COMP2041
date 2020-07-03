@@ -2,7 +2,7 @@
 
 # check cwd is a repo
 if [ ! -d ".shrug" ]; then
-	echo "Not a repository. Call shrug-init"
+	# echo "Not a repository. Call shrug-init"
 	exit 1
 fi
 
@@ -29,11 +29,11 @@ for file in $(ls $path/ | cat); do
 	# changes have been STAGED for commit via shrug-add
 	if [ -f $path/$file/$file ]; then
 		found=1
-		echo "Commiting file '$file'"
+		# echo "Commiting file '$file'"
 		# create backup
 		mv $path/$file/$file $path/$file/$n.$file
 	else
-		echo "No changes to file '$file'"
+		# echo "No changes to file '$file'"
 	fi
 done
 
@@ -41,5 +41,5 @@ if [ $found -ne 0 ]; then
 	echo "$n $msg" >> $path/_commits
 	echo "Commited as commit $n"
 else
-	echo "No changes to be commited"
+	# echo "No changes to be commited"
 fi

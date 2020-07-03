@@ -1,24 +1,23 @@
 #!/bin/dash
 if [ ! -d ".shrug" ]; then
-	echo "Not a repository. Call shrug-init"
+	# echo "Not a repository. Call shrug-init"
 	exit 1
 fi
-
 path=".shrug/$(cat .shrug/_branch)"
 
 for file in "$@"; do
 	# if the file doesn't exist in current directory, ignore it
 	if [ ! -f "$file" ]; then
-		echo "'$file' does not exist"
+		# echo "'$file' does not exist"
 		continue
 	fi
 
 	# if we are already tracking this file, do not create new direcotry for it
 	if [ ! -d "$path/$file" ]; then
 		mkdir "$path/$file"
-		echo "'$file' is now being tracked"
+		# echo "'$file' is now being tracked"
 	else
-		echo "'$file' changes saved"
+		# echo "'$file' changes saved"
 	fi
 
 	# update latest changes
