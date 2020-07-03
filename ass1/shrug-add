@@ -16,8 +16,6 @@ for file in "$@"; do
 	if [ ! -d "$path/$file" ]; then
 		mkdir "$path/$file"
 		# echo "'$file' is now being tracked"
-	else
-		# echo "'$file' changes saved"
 	fi
 
 	# update latest changes
