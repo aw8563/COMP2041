@@ -15,8 +15,7 @@ fi
 # initialise new repo
 echo "Initialized empty shrug repository in .shrug"
 mkdir ".shrug"
-touch ".shrug/_branch"
-
-./shrug-branch master
-
 echo "master" > ".shrug/_branch"
+
+mkdir ".shrug/master"
+touch ".shrug/master/_commits"
