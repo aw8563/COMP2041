@@ -15,7 +15,11 @@ file=$(echo $arg | cut -d ":" -f2)
 
 # if commit is not provided, take the current staged file
 if [ -z "$commit" ]; then
-	cat "$path/$file/$file"
+	if [ -f "$path/$file/staged" ]; then
+		cat "$path/$file/staged"
+	else
+		cat "$path/$file/latest"
+	fi
 else # use the commit index instead
 	cat "$path/$file/$commit.$file"
 fi

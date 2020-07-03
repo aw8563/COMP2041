@@ -27,19 +27,20 @@ for file in $(ls $path/ | cat); do
 	fi
 
 	# changes have been STAGED for commit via shrug-add
-	if [ -f $path/$file/$file ]; then
+	if [ -f $path/$file/staged ]; then
 		found=1
 		# echo "Commiting file '$file'"
 		# create backup
-		mv $path/$file/$file $path/$file/$n.$file
+		cp $path/$file/staged $path/$file/$n.$file
+		mv $path/$file/staged $path/$file/latest
 	# else
 	# 	echo "No changes to file '$file'"
-	# fi
+	fi
 done
 
 if [ $found -ne 0 ]; then
 	echo "$n $msg" >> $path/_commits
-	echo "Commited as commit $n"
-else
+	echo "Committed as commit $n"
+# else
 	# echo "No changes to be commited"
 fi

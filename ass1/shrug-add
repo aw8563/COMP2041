@@ -19,6 +19,6 @@ for file in "$@"; do
 	fi
 
 	# update latest changes
-	cp "$file" "$path/$file/$file"
+	cp "$file" "$path/$file/staged"
 done
 
