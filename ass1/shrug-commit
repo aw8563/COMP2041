@@ -32,9 +32,9 @@ for file in $(ls $path/ | cat); do
 		# echo "Commiting file '$file'"
 		# create backup
 		mv $path/$file/$file $path/$file/$n.$file
-	else
-		# echo "No changes to file '$file'"
-	fi
+	# else
+	# 	echo "No changes to file '$file'"
+	# fi
 done
 
 if [ $found -ne 0 ]; then
