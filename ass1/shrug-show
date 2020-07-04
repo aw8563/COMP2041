@@ -17,7 +17,7 @@ n=$(wc -l $path/_commits | cut -d " " -f1)
 
 # if commit is not provided, take the current staged file
 if [ -z "$commit" ]; then
-	if [ ! -d $path/$file ]; then
+	if [ ! -d $path/$file ] || [ ! -f $path/$file/_tracked ]; then
         	echo "shrug-show: error: '$file' not found in index"
         	exit 1
 	fi
