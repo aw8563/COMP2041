@@ -66,6 +66,12 @@ if [ $found -ne 0 ]; then
                 continue
         fi
 
+        # Only consider files that are tracked.
+        # If the file is shrug-rm'ed we ignore it. 
+        if [ -f $path/_tracked ]; then
+        	continue
+        fi
+
         # changes have been STAGED for commit via shrug-add
 		if [ -f $path/$file/latest ]; then
 			cp $path/$file/latest $path/$file/$n.$file		

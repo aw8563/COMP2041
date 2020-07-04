@@ -29,5 +29,6 @@ for file in "$@"; do
 
 	# update latest changes
 	cp "$file" "$path/$file/staged"
+	touch "$path/$file/_tracked"
 done
 
