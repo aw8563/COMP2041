@@ -5,6 +5,8 @@ if [ ! -d ".shrug" ]; then
 fi
 path=".shrug/$(cat .shrug/_branch)"
 
+
+
 for file in "$@"; do
 	# if the file doesn't exist in current directory, ignore it
 	if [ ! -f "$file" ]; then
@@ -18,11 +20,12 @@ for file in "$@"; do
 		mkdir "$path/$file"
 	fi
 
-        if [ -f "$path/$file/latest" ]; then
-                if cmp -s "$file" "$path/$file/latest"; then
-                        continue
-                fi
+	# if there is no change to the file, do not add it	
+    if [ -f "$path/$file/latest" ]; then
+        if cmp -s "$file" "$path/$file/latest"; then
+                continue
         fi
+    fi
 
 	# update latest changes
 	cp "$file" "$path/$file/staged"
