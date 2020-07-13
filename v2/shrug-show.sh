@@ -25,7 +25,7 @@ if [ -z "$commit" ]; then
 	cat "$path/index/$file"
 else # use the commit index instead
 	# if commit does not exist
-	if [ $commit -gt $nCommits ]; then
+	if [ $commit -ge $nCommits ]; then
     	echo "shrug-show: error: unknown commit '$commit'"
     	exit 1
 	fi

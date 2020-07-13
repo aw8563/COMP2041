@@ -27,7 +27,7 @@ if [ $1 = "-a" ]; then
 fi
 
 # search that we actually have a file to commit
-if [ -z "$(ls $path/staged)" ]; then
+if [ -z "$(ls $path/staged)" ] && [ -z "$(ls $path/removed)" ]; then
 	echo "nothing to commit"
 	exit 1
 fi
@@ -36,9 +36,16 @@ fi
 echo "$n $msg" >> "$path/.commits"
 echo "Committed as commit $n"
 
+rm -rf "$path/latest/"
+mkdir "$path/latest"
+
 # create commit directory
 mkdir "$path/$n"
 for file in $path/index/*; do
+	if [ ! -f $file ]; then
+		continue
+	fi
+
 	# copy to commits folder
 	cp "$file" "$path/$n/"
 
@@ -46,6 +53,9 @@ for file in $path/index/*; do
 	cp "$file" "$path/latest/"	
 done
 
-# clean staged files
+# clean staged/removed files
 rm -rf "$path/staged/"
 mkdir "$path/staged/"
+
+rm -rf "$path/removed"
+mkdir "$path/removed"

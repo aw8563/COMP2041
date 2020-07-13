@@ -66,7 +66,7 @@ for file in "$@"; do
 		fi
 
 		# If there are still staged changes not commited yet
-		if [ -f "$path/staged/$file" ]; then
+		if [ -f "$path/staged/$file" ] || [ -f "$path/removed/$file" ]; then
 			echo "shrug-rm: error: '$file' has changes staged in the index"
 			exit 1
 		fi
@@ -79,11 +79,20 @@ for file in "$@"; do
 		continue
 	fi
 
-	mv "$path/index/$file" "$path/removed/" # move form index to removed folder so git status can display it
-	rm -rf "$path/staged/$file"	# removed any staged changes
+	# stage the remove
+	mv "$path/index/$file" "$path/removed/$file"
+	
+	# removed any other staged changes
+	rm -rf "$path/staged/$file"	
 
 	# if we are force removing or --cached is not selected, we want to remove from cwd as well
 	if [ $cache -eq 0 ]; then
 		rm -rf "$file"
+
+		# do not stage the rm if the repo doesn't contain the file
+		if [ ! -f "$path/latest/$file" ]; then
+			rm -rf "$path/removed/$file"
+		fi
+
 	fi
 done

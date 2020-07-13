@@ -37,42 +37,58 @@ for file in *; do
 	cp $file .dummy/
 done
 
+
 for dummyfile in .dummy/*; do
+	if [ ! -f "$dummyfile" ]; then
+		continue
+	fi
+
 	file=$(basename $dummyfile)
 
-	# check that the file has not been deleted in cwd
-	if [ ! -f "$file" ]; then
-		if [ -f "$path/removed/$file" ]; then
-			echo "$file - deleted"
+	# check if the file was shrug-rm'ed
+	if [ -f "$path/removed/$file" ]; then
+		# if we are checking a removed file,
+		if [ -f "$file" ]; then
+			echo "$file - untracked"
 		else
-			echo "$file - file deleted"
+			echo "$file - deleted"
 		fi
 		continue
 	fi
 
-	# not in index
-	if [ ! -f "$path/index/$file" ]; then
-		# check whether the file is untracked or was removed from index
-		if [ -f "$path/latest/$file" ]; then
-			echo "$file - deleted"
+	# if the file is missing, then it has been deleted by user
+	if [ ! -f "$file" ]; then
+		if [ -f "$path/staged/$file" ]; then
+			echo "$file - added to index, file deleted"
 		else
-			echo "$file - untracked"
+			echo "$file - file deleted"
 		fi
 
+		continue
+	fi
+
+	# FILE HAS NOT BEEN REMOVED
+	# check if we are tracking it in our index
+	if [ ! -f "$path/index/$file" ]; then
+
+		echo "$file - untracked"
 		continue
 	fi
 
 	# FILE IS IN OUR INDEX
-
-	# check if it has just been added	
+	# check if there are previous commits
 	if [ ! -f "$path/latest/$file" ]; then
-		echo "$file - added to index"
+		if [ -f "$path/staged/$file" ] && !(cmp -s "$file" "$path/staged/$file" ); then
+			echo "$file - added to index, file changed"
+		else
+			echo "$file - added to index"
+		fi
+
 		continue
 	fi
 
-	# FILE HAS STAGED CHANGES
-
-	# if there are already changes staged
+	# FILE HAS PREVIOUS COMMITS
+	# check if there are already changes staged
 	if [ -f "$path/staged/$file" ]; then
 		# check if EXTRA changes have been made but not staged
         if cmp -s "$file" "$path/staged/$file"; then
@@ -84,11 +100,8 @@ for dummyfile in .dummy/*; do
         continue
 	fi
 
-
-
-	# FILE IS IN OUR INDEX AND HAS PREVIOUS COMMIT
-
-	# check if there are changes that have not been staged
+	# FILE HAS NO STAGED CHANGES AND HAS PREVIOUS COMMITS
+	# check if there are changes that will cause it to be different to repo
 	if cmp -s "$file" "$path/latest/$file"; then
 		echo "$file - same as repo"
 	else
