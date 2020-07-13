@@ -12,4 +12,5 @@ echo "Initialized empty shrug repository in .shrug"
 mkdir ".shrug"
 echo "master" > ".shrug/.branch"
 
-./shrug-branch.sh "master"
+set -- "master"	
+. shrug-branch

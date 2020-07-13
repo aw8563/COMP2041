@@ -21,7 +21,8 @@ if [ $1 = "-a" ]; then
 	# add all files from index
 	for file in $path/index/*; do
 		# TODO: remove delted files from index
-		./shrug-add.sh $(basename $file) 
+		set -- $(basename $file) 
+		. shrug-add
 	done
 fi
 
