@@ -32,7 +32,11 @@ for dummyfile in .dummy/*; do
 
 	# check that the file has not been deleted in cwd
 	if [ ! -f "$file" ]; then
-		echo "$file - file deleted"
+		if [ -f "$path/removed/$file" ]; then
+			echo "$file - deleted"
+		else
+			echo "$file - file deleted"
+		fi
 		continue
 	fi
 
