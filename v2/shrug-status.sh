@@ -11,16 +11,26 @@ mkdir .dummy
 
 # add all files in cwd/index/removed so we output deleted files in alphabetical order...
 for file in $path/removed/*; do
+	# skip non files
+	if [ ! -f "$file" ]; then
+		continue
+	fi
+
 	cp $file .dummy/
 done
 
 for file in $path/index/*; do
+	# skip non files
+	if [ ! -f "$file" ]; then
+		continue
+	fi
+
 	cp $file .dummy/
 done
 
 for file in *; do
-	# skip directories
-	if [ -d "$file" ]; then
+	# skip non files
+	if [ ! -f "$file" ]; then
 		continue
 	fi
 
