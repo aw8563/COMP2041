@@ -68,7 +68,7 @@ if [ $found -ne 0 ]; then
 
         # Only consider files that are tracked.
         # If the file is shrug-rm'ed we ignore it. 
-        if [ -f $path/_tracked ]; then
+        if [ ! -f $path/$file/_tracked ]; then
         	continue
         fi
 
@@ -82,6 +82,7 @@ if [ $found -ne 0 ]; then
 	        cp $path/$file/staged $path/$file/$n.$file
 	        mv $path/$file/staged $path/$file/latest
 		fi
+		
 	done
 else
 	echo "nothing to commit"
