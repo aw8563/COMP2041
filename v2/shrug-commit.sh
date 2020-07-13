@@ -44,8 +44,6 @@ for file in $path/index/*; do
 
 	# update our latest changes
 	cp "$file" "$path/latest/"	
-
-	# TODO: update removed files
 done
 
 # clean staged files

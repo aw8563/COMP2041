@@ -48,6 +48,7 @@ touch .shrug/$1/.commits
 mkdir ".shrug/$1/index"
 mkdir ".shrug/$1/latest"
 mkdir ".shrug/$1/staged"
+mkdir ".shrug/$1/removed"
 
 
 

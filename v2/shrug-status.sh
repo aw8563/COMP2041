@@ -1,6 +1,6 @@
 #!/bin/dash
 if [ ! -d ".shrug" ]; then
-	echo "shrug-add: error: no .shrug directory containing shrug repository exists"
+	echo "shrug-status: error: no .shrug directory containing shrug repository exists"
 	exit 1
 fi
 
@@ -9,7 +9,11 @@ path=".shrug/$(cat .shrug/.branch)"
 rm -rf .dummy
 mkdir .dummy
 
-# add all indexed files and files in cwd so we output deleted files in alphabetical order...
+# add all files in cwd/index/removed so we output deleted files in alphabetical order...
+for file in $path/removed/*; do
+	cp $file .dummy/
+done
+
 for file in $path/index/*; do
 	cp $file .dummy/
 done
@@ -26,6 +30,12 @@ done
 for dummyfile in .dummy/*; do
 	file=$(basename $dummyfile)
 
+	# check that the file has not been deleted in cwd
+	if [ ! -f "$file" ]; then
+		echo "$file - file deleted"
+		continue
+	fi
+
 	# not in index
 	if [ ! -f "$path/index/$file" ]; then
 		# check whether the file is untracked or was removed from index
@@ -39,12 +49,6 @@ for dummyfile in .dummy/*; do
 	fi
 
 	# FILE IS IN OUR INDEX
-	
-	# check that the file has not been deleted in cwd
-	if [ ! -f "$file" ]; then
-		echo "$file - file deleted"
-		continue
-	fi
 
 	# if there are already changes staged
 	if [ -f "$path/staged/$file" ]; then
