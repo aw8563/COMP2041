@@ -6,6 +6,9 @@ if [ ! -d ".shrug" ]; then
 	exit 1
 fi
 
+tac ".shrug/.commits"
+exit 1
+
 path=".shrug/$(cat .shrug/.branch)"
 
 tac $path/.commits

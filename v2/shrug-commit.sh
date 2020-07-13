@@ -10,7 +10,7 @@ fi
 path=".shrug/$(cat .shrug/.branch)"
 
 # commit number
-n=$(wc -l $path/.commits | cut -d " " -f1)
+n=$(wc -l .shrug/.commits | cut -d " " -f1)
 
 msg=$2
 
@@ -33,7 +33,7 @@ if [ -z "$(ls $path/staged)" ] && [ -z "$(ls $path/removed)" ]; then
 fi
 
 # commit everything that is tracked
-echo "$n $msg" >> "$path/.commits"
+echo "$n $msg" >> ".shrug/.commits"
 echo "Committed as commit $n"
 
 rm -rf "$path/latest/"

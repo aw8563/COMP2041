@@ -1,8 +1,7 @@
 #!/bin/dash
 
-
 if [ ! -d ".shrug" ]; then
-	echo "Not a repository. Call shrug-init"
+	echo "shrug-branch: error: no .shrug directory containing shrug repository exists"
 	exit 1
 fi
 
@@ -12,8 +11,6 @@ currentBranch=$(cat .shrug/.branch)
 if [ $# -eq 0 ]; then
 
 	ls -d .shrug/*/ | cut -d "/" -f2 | cat 
-	echo "Currently on '$currentBranch'"
-
 	exit 0
 fi
 
@@ -32,23 +29,32 @@ if [ $1 = "-d" ]; then
 	fi
 
 	if [ ! -d ".shrug/$branch/" ]; then
-		echo "Branch '$branch' does not exist"
+		echo "shrug-branch: error: branch '$branch' does not exist"
 		exit 1
 	fi
 
-	echo "Removed branch '$branch'"
+	echo "Deleted branch '$branch'"
 	rm -rf ".shrug/$branch"
 	exit 0
 fi
 
-# create new branch
-# echo "New branch '$1' created"
+
+
+
 mkdir ".shrug/$1"
-touch .shrug/$1/.commits
+touch .shrug/.commits
 mkdir ".shrug/$1/index"
 mkdir ".shrug/$1/latest"
 mkdir ".shrug/$1/staged"
 mkdir ".shrug/$1/removed"
+
+# our first master branch does not need to perform these copies
+if [ $1 != "master" ]; then
+	# copy index from our upstream branch
+	cp -R ".shrug/$currentBranch/index" ".shrug/$1/"
+	cp -R ".shrug/$currentBranch/latest" ".shrug/$1/"
+fi
+
 
 
 

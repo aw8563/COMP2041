@@ -6,6 +6,9 @@ fi
 
 path=".shrug/$(cat .shrug/.branch)"
 
+# if [ $1 = "b" ]; then
+# 	echo "$path"
+# fi
 
 
 for file in "$@"; do
@@ -31,6 +34,6 @@ for file in "$@"; do
 	if [ -f "$path/latest/$file" ] && cmp -s "$file" "$path/latest/$file"; then
 		rm -f "$path/staged/$file"
 	else 
-		cp "$file" "$path/staged" 
+		cp "$file" "$path/staged/" 
 	fi
 done

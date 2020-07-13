@@ -2,7 +2,7 @@
 
 # check cwd is a repo
 if [ ! -d ".shrug" ]; then
-	# echo "Not a repository. Call shrug-init"
+	echo "shrug-show: error: no .shrug directory containing shrug repository exists"
 	exit 1
 fi
 
@@ -13,7 +13,7 @@ arg=$1
 commit=$(echo $arg | cut -d ":" -f1)
 file=$(echo $arg | cut -d ":" -f2)
 
-nCommits=$(wc -l $path/.commits | cut -d " " -f1)
+nCommits=$(wc -l .shrug/.commits | cut -d " " -f1)
 
 # if commit is not provided, take the current staged file
 if [ -z "$commit" ]; then
