@@ -50,6 +50,14 @@ for dummyfile in .dummy/*; do
 
 	# FILE IS IN OUR INDEX
 
+	# check if it has just been added	
+	if [ ! -f "$path/latest/$file" ]; then
+		echo "$file - added to index"
+		continue
+	fi
+
+	# FILE HAS STAGED CHANGES
+
 	# if there are already changes staged
 	if [ -f "$path/staged/$file" ]; then
 		# check if EXTRA changes have been made but not staged
@@ -62,13 +70,7 @@ for dummyfile in .dummy/*; do
         continue
 	fi
 
-	# FILE IS IN OUR INDEX BUT NO STAGED CHANGES
 
-	# check if it has just been added	
-	if [ ! -f "$path/latest/$file" ]; then
-		echo "$file - added to index"
-		continue
-	fi
 
 	# FILE IS IN OUR INDEX AND HAS PREVIOUS COMMIT
 

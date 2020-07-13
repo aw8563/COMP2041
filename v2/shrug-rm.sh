@@ -83,7 +83,7 @@ for file in "$@"; do
 	rm -rf "$path/staged/$file"	# removed any staged changes
 
 	# if we are force removing or --cached is not selected, we want to remove from cwd as well
-	if [ $force -ne 0 ] || [ $cache -eq 0 ]; then
+	if [ $cache -eq 0 ]; then
 		rm -rf "$file"
 	fi
 done
