@@ -15,4 +15,4 @@ while (<>) {
 	}
 }
 
-print ("$count\n");
+print ("$count words\n");

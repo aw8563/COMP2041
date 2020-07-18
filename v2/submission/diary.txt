@@ -1,0 +1,26 @@
+ASSIGNMENT DIARY
+
+3rd July: 12pm - 5pm
+- Started the assignment. 
+- Looked through assignment specs.
+- Designed rough skeleton of how the .shrug directory should be structured.
+- Coding & debugging. Finished all of subset 0
+
+4th July: 2pm - 4pm
+- Worked on subset1
+- Completed shrug-commit -a
+- Completed the logic of shrug-rm 
+- Still need to add the error messages for shrug-rm
+
+5th July 1pm - 6pm
+- Realised my design was bad. Restructured the .shrug directory
+- Fixed up subset0 to use the new structure.
+- Finished implementing all of subset1 including error messages
+
+5th July 8pm - 10pm
+- Worked on subset2
+- Implemented shrug-branch and shrug-checkout
+
+14th July
+- Wrote test scripts
+- Wrote more code to account for the new specs

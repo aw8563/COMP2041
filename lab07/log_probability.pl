@@ -5,14 +5,14 @@ use File::Basename;
 $target = $ARGV[0];
 foreach $file (glob "lyrics/*.txt") {
 	$basename = basename($file, ".txt");
-	open(file, "<", "$file") or die $1;
+	open(f, "<", "$file") or die $1;
 
 	$basename =~ s/_/ /g;
 
 	$total = 0;
 	$count = 0;
 	
-	while (<file>) {
+	while (<f>) {
 		chomp;
 		my @words = split("[^a-zA-Z]", $_);
 
@@ -27,6 +27,6 @@ foreach $file (glob "lyrics/*.txt") {
 	}
 
 
-	close(file);
+	close(f);
 	printf("log((%d+1)/%6d) = %8.4f %s\n", $count, $total, log(($count + 1)/$total), $basename);
 }
