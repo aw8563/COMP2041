@@ -2,7 +2,7 @@
 
 # check cwd is a repo
 if [ ! -d ".shrug" ]; then
-	# echo "Not a repository. Call shrug-init"
+	echo "shrug-log: error: no .shrug directory containing shrug repository exists"
 	exit 1
 fi
 

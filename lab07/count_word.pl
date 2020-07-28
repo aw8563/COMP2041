@@ -15,4 +15,4 @@ while (<STDIN>) {
 	}
 }
 
-print ("$count\n");
+print ("$ARGV[0] occurred $count times\n");
