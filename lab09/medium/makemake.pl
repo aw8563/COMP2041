@@ -1,5 +1,35 @@
 #!/usr/bin/perl -w
 
+
+# given a file, get all #includes
+sub getIncludedFiles {
+	$file = $_[0];
+
+	my @result = ();
+
+	open (F, "<" , "$file") or die $!;
+
+	# look for #include "xxxx"
+	while (my $line = <F>) {
+		if ($line =~ /^\s*#include \".*\"/) {
+			# retrieve the name of file				
+			$line =~ /(\".*\")/;		
+
+			$include = $1;
+			
+			# remove quotes and .h
+			$include =~ s/\"//g;			
+			$include =~s/\.h//g;		
+			
+			# store it in our array
+			push (@result, $include);
+		}
+	}
+	close (F);
+
+	return @result;
+}
+
 open (MF, ">", "Makefile") or die $!;
 
 $d = `date`;
@@ -27,7 +57,10 @@ foreach $file (glob "*.c") {
 	}
 }
 
-print MF "$main:\t$main.o ";
+######################################################################
+# we have our main here
+# logic for constructing the Makefile 
+
 
 # found our main file
 if ($main eq "") {
@@ -35,58 +68,50 @@ if ($main eq "") {
 	exit 1;
 }
 
-my @objects = ();
-push (@objects, $main);
+my %objects = ($main, 1);
 
-open (F, "<" , "$main.c") or die $!;
+my @stack = getIncludedFiles("$main.c");
 
-# look for #include "xxxx"
-while (my $line = <F>) {
-	if ($line =~ /^\s*#include \".*\"/) {
-		# retrieve the name of file
-					
-		$line =~ /(\".*\")/;		
-
-		$include = $1;
-		$include =~ s/\"//g;			
-		$include =~s/\.h//g;		
-	
-		print MF "$include.o ";	
-		
-		# store it in our array
-		push (@objects, $include);
+while (1) {
+	$size = @stack;
+	if ($size == 0) {
+		last;
 	}
+
+	$o = pop(@stack);
+	
+	# append to queue if we have more elments to consider
+	if (!defined($objects{$o})) {
+		@arr = getIncludedFiles("$o.h");
+		push(@stack, @arr);
+	}
+
+	$objects{$o} = 1;
 }
 
-close F;
-
-my @sorted = sort(@objects);
-
+print MF "$main:\t";
+foreach my $key (keys %objects) {
+	print MF "$key.o ";
+}
 
 print MF "\n\t\$(CC) \$(CFLAGS) -o \$@";
-foreach (@sorted) {
-	print MF " $_.o";
+foreach my $key (keys %objects) {
+	print MF " $key.o";
 }
+
 print MF "\n\n";
 
-foreach (@sorted) {
-	print MF "$_.o:";
-	
-	# get #includes in each .c file
-	open (F, "<", "$_.c") or die $1;
-	
-	while (my $line = <F>) {
-		if ($line =~ /^\s*#include \".*\"/) {
-	                # retrieve the name of file
-                	$line =~ /(\".*\")/;
-			$include = $1;
+# go through each object file, and find associated headers and in the .c file
+foreach my $object (keys %objects) {
+	print MF "$object.o: ";
 
-			$include =~ s/\"//g;			
-			print MF " $include";	
-		}
+	my @arr = getIncludedFiles("$object.c");
+	foreach (@arr) {
+		print MF "$_.h ";
 	}
-	close(F);	
-	print MF " $_.c\n";
+
+
+	print MF "$object.c\n";
 }
 
 
