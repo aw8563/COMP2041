@@ -6,7 +6,9 @@ $web_page = get($url) or die "Unable to get $url";
 
 #print $web_page;
 @lines = split("\n", $web_page);
+
 my %map;
+my @results;
 
 $flag = 0;
 
@@ -19,7 +21,8 @@ foreach $line (@lines) {
 				$line =~ s/\.html\">/ /g;
 
 				if (!exists $map{$line}) {
-					print ("$line\n");
+					push (@results, "$line\n");
+					# print ("$line\n");
 				}
 
 				$map{$line} = "XD";
@@ -27,3 +30,7 @@ foreach $line (@lines) {
 			$flag = !$flag;
 		}
 }
+
+@sorted = sort @results;
+
+print (@sorted);
