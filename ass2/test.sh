@@ -1,4 +1,7 @@
 #!/bin/dash
+a=hello
+b=world
+
 echo When old age shall this generation waste,
 echo Thou shalt remain, in midst of other woe
 echo Than ours, a friend to man, to whom thou sayst,

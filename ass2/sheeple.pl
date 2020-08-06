@@ -28,7 +28,8 @@ sub main {
 			if ($lhs and $rhs) {
 				# TODO
 				# need to check what rhs actually is. It could be $1 etc
-				push(@result, "$lhs = \'$rhs\';");
+				$indent = getIndentation($line);
+				push(@result, "${indent}\$$lhs = \'$rhs\';\n");
 				next;
 			}
 		}
@@ -96,7 +97,7 @@ sub isComment {
 # checks if a given line is assigning a variable
 # returns left hand side and righthand side of the match
 sub isAssign {
-	$_[0] =~ /(^\s*[_a-zA-Z]{1}[a-zA-Z_0-9]*)=(.+)/;
+	$_[0] =~ /^\s*([_a-zA-Z]{1}[a-zA-Z_0-9]*)=(.+)/;
 	return $1, $2;
 }
 
@@ -149,7 +150,7 @@ sub isChangeDir {
 # checks if a line is calling echo
 # returns what is getting printed
 sub isPrint {
-	$_[0] =~ /^s*echo (.*)\s*$/;
+	$_[0] =~ /^\s*echo (.*)\s*$/;
 	return $1;
 }
 
@@ -157,13 +158,13 @@ sub isPrint {
 # checks if a line is calling read
 # returns the variable we read into
 sub isRead {
-	$_[0] =~ /^s*read (.*)\s*$/;
+	$_[0] =~ /^\s*read (.*)\s*$/;
 	return $1;
 }
 
 # returns required indentation for a line
 sub getIndentation {
-	$_[0] =~ /(^s*)/;
+	$_[0] =~ /(^\s*)/;
 	return $1;
 }
 

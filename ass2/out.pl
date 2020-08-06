@@ -1,4 +1,7 @@
 #!/usr/bin/perl -w
+	$a = 'hello';
+$b = 'world';
+
 print "When old age shall this generation waste,\n";
 print "Thou shalt remain, in midst of other woe\n";
 print "Than ours, a friend to man, to whom thou sayst,\n";
