@@ -27,3 +27,13 @@ echo
 echo "============================"
 
 ./out.pl
+
+./out.pl > out
+./$file > exp
+
+echo "============================"
+if ! cmp -s out exp; then
+	echo "DIFFERENT!"
+else
+	echo "SAME!"
+fi

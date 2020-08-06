@@ -10,23 +10,26 @@ sub main {
 
 	# main loop that reads the file and processes each line
 	while (my $line = <F>) {
+
+		# header line
 		if (isHeader($line)) {
 			push (@result, "#!/usr/bin/perl -w\n");
 			next;
 		}
 
-
+		# remove \n
 		chomp($line);
+
+		# parse the line to do some conversions first
 		($line, $comment) = parseLine($line);
 
 		# if the line can be skipped
-		# shell if and while statements use 2 lines while in perl only 1 line is used
 		if (skipLine($line)) {
 			next;
 		}
 
 		# empty line
-		if ($line eq "") { 
+		if ($line =~ /^\s*$/) {
 			push (@result, "$line$comment\n");
 			next;
 		}
@@ -38,17 +41,11 @@ sub main {
 			next;
 		}
 
-		# copy comments over
-		if (isComment($line)) { 
-			push (@result, "$line\n");
-			next;
-		} 
-
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
 			if ($lhs and $rhs) {
-				
-				# handle $ assignments
+
+				# handle assigning to another varaible/string
 				if ($rhs =~ /^\$/) {
 					push(@result, formatLine($line,"\$$lhs = $rhs", $comment));
 				} else {
@@ -66,6 +63,7 @@ sub main {
 			next;
 		}
 
+		# checks for loops
 		if (my ($iterator, $list) = isForLoop($line)) {
 			if ($iterator and $list) {
 				# construct the list
@@ -76,14 +74,16 @@ sub main {
 			}
 		}
 
+		# checks while loops
 		if (my $condition = isWhileLoop($line)) {
 			push(@result, formatLine($line, "while ($condition) {", $comment, 1));
 			next;
 		}
 
-
+		# checks if else statement
 		if (my ($statement, $condition) = isIfStatement($line)) {
-			if ($statement){
+			if ($statement){	
+				# format properly depending on keyword
 				if ($statement eq "else") {
 					push (@result, formatLine($line, "} else {", $comment, 1));
 					next;
@@ -91,6 +91,7 @@ sub main {
 
 				if ($condition) {
 					$bracket = "} ";
+					# more formatting
 					if ($statement eq "if") {
 						$bracket = "";
 					} else {
@@ -105,10 +106,10 @@ sub main {
 
 
 
-		# if we reach here then the line should is untranslateable
+		# if we reach here then the line should be untranslateable
 		# use system() function isntead
 		my $output = translateSystemCall($line);
-		push(@result, $output);
+		push(@result, formatLine($line, $output, $comment));
 	}
 
 	close(F);
@@ -158,8 +159,12 @@ sub parseLine {
 		$regex = quotemeta $copy;
 
 		# remove the comment from the line (will add it back later)
-		# remoes the whitespace before comment as well
-		$line =~ s/\s*$regex$//;
+		# remoes the whitespace before comment as well (if the line isn't empty)
+		if (!$line =~ /^\s*$regex$/) {
+			$line =~ s/\s*$regex$//;
+		} else {
+			$line =~ s/$regex$//;
+		}
 	}
 
 
@@ -261,7 +266,7 @@ sub isIfStatement {
 		return "else", "";
 	}
 
-	$_[0] =~ /(^\s*(if)|(elif)) (\(.+\))/;
+	$_[0] =~ /^\s*((if)|(elif)) (\(.+\))/;
 	return $1, $4;
 }
 
@@ -294,7 +299,7 @@ sub isBuiltinFunction {
 
 	# read
 	if (my $var = isRead($line)) {
-		$line1 = formatLine($line, "$indent\$$var = <STDIN>", $comment);
+		$line1 = formatLine($line, "\$$var = <STDIN>", $comment);
 		$line2 = formatLine($line, "chomp \$$var");
 
 		return "$line1\n$line2"; 
@@ -386,17 +391,10 @@ sub getIndentation {
 	return $1;
 }
 
-# returns any comments at the end of a line
-sub getComments {
-	$_[0] =~ /^\s*(#.*$)/;
-	return $1;
-}
-
 # returns the translated system('...') line
 sub translateSystemCall {
-	$indent = getIndentation($_[0]);
 	$_[0] =~ /^\s*(.+)\s*$/;
-	return "${indent}system \"$1\";\n";
+	return "system \"$1\"";
 }
 
 # pad the converted line with indentation and trailing comments
