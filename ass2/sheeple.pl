@@ -10,7 +10,21 @@ sub main {
 
 	# main loop that reads the file and processes each line
 	while (my $line = <F>) {
+		chomp($line);
 		$line = replaceVariables($line);
+
+		# if the line can be skipped
+		# shell if and while statements use 2 lines while in perl only 1 line is used
+		if (skipLine($line)) {
+			next;
+		}
+
+		# closes brackets
+		# fi, done
+		if (isClosingBracket($line)) {
+			push (@result, formatLine($line, "}"));
+			next;
+		}
 
 		if (isHeader($line)) {
 			push (@result, "#!/usr/bin/perl -w\n");
@@ -26,10 +40,7 @@ sub main {
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
 			if ($lhs and $rhs) {
-				# TODO
-				# need to check what rhs actually is. It could be $1 etc
-				$indent = getIndentation($line);
-				push(@result, "${indent}\$$lhs = \'$rhs\';\n");
+				push(@result, formatLine($line, "\$$lhs = \'$rhs\'"));
 				next;
 			}
 		}
@@ -40,6 +51,18 @@ sub main {
 			push (@result, $output);
 			next;
 		}
+
+		if (my ($iterator, $list) = isForLoop($line)) {
+			if ($iterator and $list) {
+				# construct the list
+				$list = createList($list);
+
+				push (@result, formatLine($line, "foreach \$${iterator} \($list\) {"));
+				next;
+			}
+		}
+
+
 
 		# if we reach here then the line should is untranslateable
 		# use system() function isntead
@@ -87,7 +110,7 @@ sub isHeader {
 
 # checks if a given line is a comment or purely whitespace
 sub isComment {
-	if ($_[0] eq "\n") {
+	if ($_[0] eq "") {
 		return 1;
 	}
 
@@ -97,7 +120,15 @@ sub isComment {
 # checks if a given line is assigning a variable
 # returns left hand side and righthand side of the match
 sub isAssign {
-	$_[0] =~ /^\s*([_a-zA-Z]{1}[a-zA-Z_0-9]*)=(.+)/;
+	$_[0] =~ /^\s*([_a-zA-Z]{1}[a-zA-Z_0-9]*)=(.+)\s*/;
+	return $1, $2;
+}
+
+# checks if a line is a FOR loop
+# format is "for <iterator> in <list>"
+# returns <iterator> and <list>
+sub isForLoop {
+	$_[0] =~ /^\s*for (.+) in (.+)\s*$/;
 	return $1, $2;
 }
 
@@ -109,19 +140,25 @@ sub isBuiltinFunction {
 
 	# exit
 	if (isExit($line)) {
-		return "$line;";
+		return "$line;\n";
 	}
 
 	# read
 	if (my $var = isRead($line)) {
-		$indent = getIndentation($line);
-		return "$indent\$$var = <STDIN>;\n${indent}chomp \$$var;\n";
+		$line1 = formatLine($line, "$indent\$$var = <STDIN>");
+		$line2 = formatLine($line, "chomp \$$var");
+
+		return "$line1\n$line2"; 
+		# $indent = getIndentation($line);
+		# return "$indent\$$var = <STDIN>;\n${indent}chomp \$$var;\n";
 	}
 
 	# cd
 	if (my $dir = isChangeDir($line)) {
-		$indent = getIndentation($line);
-		return "${indent}chdir '$dir';\n";
+		return formatLine($line, "chdir '$dir'");
+
+		# $indent = getIndentation($line);
+		# return "${indent}chdir '$dir';\n";
 	}
 
 	# test 
@@ -130,9 +167,22 @@ sub isBuiltinFunction {
 
 	# echo
 	if (my $arguments = isPrint($line)) {
-		$indent = getIndentation($line);
-		return "${indent}print \"$arguments\\n\";\n";
+		return formatLine($line, "print \"$arguments\\n\"");
+		# $indent = getIndentation($line);
+		# return "${indent}print \"$arguments\\n\";\n";
 	}	
+}
+
+# skip the line
+# ignores "do" and "then"
+sub skipLine {
+	# negative lookahead for "do" so we do not match "done"
+	return $_[0] =~ /^\s*(do(?!ne))|(then)\s*$/;
+}
+
+# closes bracket on "done" and "fi"
+sub isClosingBracket {
+	return $_[0] =~ /^\s*(done)|(fi)\s*$/;
 }
 
 # checks if we are exiting
@@ -158,13 +208,19 @@ sub isPrint {
 # checks if a line is calling read
 # returns the variable we read into
 sub isRead {
-	$_[0] =~ /^\s*read (.*)\s*$/;
+	$_[0] =~ /^\s*read (.+)\s*$/;
 	return $1;
 }
 
 # returns required indentation for a line
 sub getIndentation {
 	$_[0] =~ /(^\s*)/;
+	return $1;
+}
+
+# returns any comments at the end of a line
+sub getComments {
+	$_[0] =~ /^\s*(#.*$)/;
 	return $1;
 }
 
@@ -175,4 +231,31 @@ sub translateSystemCall {
 	return "${indent}system \"$1\";\n";
 }
 
+# pad the converted line with indentation and trailing comments
+sub formatLine {
+	$indent = getIndentation($_[0]);
+	$comments = getIndentation($_[0]);
+
+	return "${indent}${_[1]}; $comments\n";
+}
+
+# create the appropriate list to iterate over
+sub createList {
+	$list = $_[0];
+
+	# remove trailing spaces
+	$list =~ s/\s*$//g;
+
+	# directory
+	if ($list =~ /^\*/) {
+		return "glob(\"$list\")";
+	}
+
+	# list of items.
+
+	# replace spaces with "', '"
+	$list =~ s/\s/\', \'/g;
+
+	return "\'$list\'";	
+}
 main()

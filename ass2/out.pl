@@ -1,16 +1,4 @@
 #!/usr/bin/perl -w
-	$a = 'hello';
-$b = 'world';
-
-print "When old age shall this generation waste,\n";
-print "Thou shalt remain, in midst of other woe\n";
-print "Than ours, a friend to man, to whom thou sayst,\n";
-print "Beauty is truth, truth beauty, - that is all\n";
-print "Ye know on earth, and all ye need to know.\n";
-
-chdir 'test';
-chdir '../';
-system "ls";
-
-print "$ARGV[0]\n";
-exit 1;
+foreach $c_file (glob("*.c")) {; 
+    print "gcc -c $c_file\n";     
+}; 

@@ -62,24 +62,6 @@ COMP6771 Advanced C++ Programming
 COMP6841 Extended Security Engineering and Cyber Security
 COMP6843 Extended Web Application Security and Testing
 COMP6845 Extended Digital Forensics and Incident Response
-COMP9242 Advanced Operating Systems
-COMP9243 Distributed Systems
-COMP9301 Cyber Security Project
-COMP9302 Cyber Security Project B
-COMP9313 Big Data Management
-COMP9315 Database Systems Implementation
-COMP9318 Data Warehousing and Data Mining
-COMP9319 Web Data Compression and Search
-COMP9321 Data Services Engineering
-COMP9322 Software Service Design and Engineering
-COMP9323 Software as a Service Project
-COMP9332 Network Routing and Switching
-COMP9417 Machine Learning and Data Mining
-COMP9418 Advanced Topics in Statistical Machine Learning
-COMP9444 Neural Networks and Deep Learning
-COMP9447 Security Engineering Workshop
-COMP9517 Computer Vision
-COMP9844 Extended Neural Networks and Deep Learning
 COMP9020 Foundations of Computer Science
 COMP9021 Principles of Programming
 COMP9024 Data Structures and Algorithms
@@ -93,17 +75,35 @@ COMP9164 Concepts of Programming Languages
 COMP9201 Operating Systems
 COMP9211 Computer Architecture
 COMP9222 Digital Circuits and Systems
+COMP9242 Advanced Operating Systems
+COMP9243 Distributed Systems
 COMP9283 Extended Operating Systems
+COMP9301 Cyber Security Project
+COMP9302 Cyber Security Project B
 COMP9311 Database Systems
+COMP9313 Big Data Management
+COMP9315 Database Systems Implementation
+COMP9318 Data Warehousing and Data Mining
+COMP9319 Web Data Compression and Search
+COMP9321 Data Services Engineering
+COMP9322 Software Service Design and Engineering
+COMP9323 Software as a Service Project
 COMP9331 Computer Networks and Applications
+COMP9332 Network Routing and Switching
 COMP9336 Mobile Data Networking
 COMP9337 Securing Fixed and Wireless Networks
 COMP9414 Artificial Intelligence
+COMP9417 Machine Learning and Data Mining
+COMP9418 Advanced Topics in Statistical Machine Learning
 COMP9434 Robotic Software Architecture
+COMP9444 Neural Networks and Deep Learning
+COMP9447 Security Engineering Workshop
 COMP9511 Human Computer Interaction
+COMP9517 Computer Vision
 COMP9596 Research Project
 COMP9801 Extended Design and Analysis of Algorithms
 COMP9814 Extended Artificial Intelligence
+COMP9844 Extended Neural Networks and Deep Learning
 COMP9900 Information Technology Project
 COMP9991 Research Project A
 COMP9992 Research Project B
