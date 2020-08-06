@@ -7,10 +7,5 @@ number=$start
 while test $number -le $finish
 do
     echo $number
-    number=`expr $number + 1`
+    number=`expr $number + 1`  # increment number
 done
-
-if test -r nonexistantfile
-then
-    echo b
-fi

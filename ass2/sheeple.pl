@@ -10,8 +10,14 @@ sub main {
 
 	# main loop that reads the file and processes each line
 	while (my $line = <F>) {
+		if (isHeader($line)) {
+			push (@result, "#!/usr/bin/perl -w\n");
+			next;
+		}
+
+
 		chomp($line);
-		$line = parseLine($line);
+		($line, $comment) = parseLine($line);
 
 		# if the line can be skipped
 		# shell if and while statements use 2 lines while in perl only 1 line is used
@@ -19,15 +25,16 @@ sub main {
 			next;
 		}
 
-		# closes brackets
-		# fi, done
-		if (isClosingBracket($line)) {
-			push (@result, formatLine($line, "}", 1));
+		# empty line
+		if ($line eq "") { 
+			push (@result, "$line$comment\n");
 			next;
 		}
 
-		if (isHeader($line)) {
-			push (@result, "#!/usr/bin/perl -w\n");
+		# closes brackets
+		# fi, done
+		if (isClosingBracket($line)) {
+			push (@result, formatLine($line, "}", $comment, 1));
 			next;
 		}
 
@@ -40,11 +47,12 @@ sub main {
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
 			if ($lhs and $rhs) {
+				
 				# handle $ assignments
 				if ($rhs =~ /^\$/) {
-					push(@result, formatLine($line,"\$$lhs = $rhs"));
+					push(@result, formatLine($line,"\$$lhs = $rhs", $comment));
 				} else {
-					push(@result, formatLine($line, "\$$lhs = \'$rhs\'"));
+					push(@result, formatLine($line, "\$$lhs = \'$rhs\'", $comment));
 				}
 
 				next;
@@ -53,7 +61,7 @@ sub main {
 
 		# buildin functions
 		# exit read cd test expr echo
-		if (my $output = isBuiltinFunction($line)) {
+		if (my $output = isBuiltinFunction($line, $comment)) {
 			push (@result, $output);
 			next;
 		}
@@ -63,13 +71,13 @@ sub main {
 				# construct the list
 				$list = convertList($list);
 
-				push (@result, formatLine($line, "foreach \$${iterator} \($list\) {", 1));
+				push (@result, formatLine($line, "foreach \$${iterator} \($list\) {", $comment, 1));
 				next;
 			}
 		}
 
 		if (my $condition = isWhileLoop($line)) {
-			push(@result, formatLine($line, "while ($condition) {", 1));
+			push(@result, formatLine($line, "while ($condition) {", $comment, 1));
 			next;
 		}
 
@@ -77,7 +85,7 @@ sub main {
 		if (my ($statement, $condition) = isIfStatement($line)) {
 			if ($statement){
 				if ($statement eq "else") {
-					push (@result, formatLine($line, "} else {",1));
+					push (@result, formatLine($line, "} else {", $comment, 1));
 					next;
 				}
 
@@ -89,7 +97,7 @@ sub main {
 						$statement = "elsif";
 					}
 
-					push (@result, formatLine($line, "$bracket$statement $condition {", 1));
+					push (@result, formatLine($line, "$bracket$statement $condition {", $comment, 1));
 					next;
 				}
 			}
@@ -119,7 +127,41 @@ sub main {
 # $#, $@, $*
 # test, `` and [condition]
 sub parseLine {
-	my $line = $_[0];
+	my $line = $_[0]; #
+
+	# remove trailing comments first
+	# make sure that the '#' is not enclosed within quotes
+	my $nQuotes = 0;
+	my $idx = 0;
+	my $found = 0;
+
+	foreach $char (split //, $line) {
+ 		if ($char eq "\'" or $char eq "\"") {
+ 			$nQuotes++;
+ 		}
+
+ 		if ($char eq "#" and $nQuotes%2 == 0) {
+ 			$found = 1;
+ 			last;
+ 		}
+
+ 		$idx++;
+	}	
+
+	my $comment = "";
+
+	# comment from idx onwards
+	if ($found) {
+		$comment = substr($line, $idx);
+		
+		$copy = $comment;
+		$regex = quotemeta $copy;
+
+		# remove the comment from the line (will add it back later)
+		# remoes the whitespace before comment as well
+		$line =~ s/\s*$regex$//;
+	}
+
 
 	# replace $#, $@ and $*
 	$line =~ s/(\$\@)|(\"\$\@\")/\@ARGV/g;
@@ -189,7 +231,7 @@ sub parseLine {
 		$line =~ s/\[ $regex \]/\($condition\)/;
 	}
 
-	return $line;
+	return $line, $comment;
 }
 
 
@@ -242,7 +284,8 @@ sub isForLoop {
 # exit read cd test expr echo
 # returns the translated line
 sub isBuiltinFunction {
-	$line = $_[0];
+	my $line = $_[0];
+	my $comment = $_[1];
 
 	# exit
 	if (isExit($line)) {
@@ -251,7 +294,7 @@ sub isBuiltinFunction {
 
 	# read
 	if (my $var = isRead($line)) {
-		$line1 = formatLine($line, "$indent\$$var = <STDIN>");
+		$line1 = formatLine($line, "$indent\$$var = <STDIN>", $comment);
 		$line2 = formatLine($line, "chomp \$$var");
 
 		return "$line1\n$line2"; 
@@ -259,7 +302,7 @@ sub isBuiltinFunction {
 
 	# cd
 	if (my $dir = isChangeDir($line)) {
-		return formatLine($line, "chdir '$dir'");
+		return formatLine($line, "chdir '$dir'", $comment);
 	}
 
 	# test 
@@ -270,7 +313,7 @@ sub isBuiltinFunction {
 	# echo
 	if (my $arguments = isPrint($line)) {
 		$arguments = createPrintString($arguments);
-		return formatLine($line, "print \"$arguments\"");
+		return formatLine($line, "print \"$arguments\"", $comment);
 	}	
 }
 
@@ -358,15 +401,19 @@ sub translateSystemCall {
 
 # pad the converted line with indentation and trailing comments
 sub formatLine {
-	$indent = getIndentation($_[0]);
-	$comments = getIndentation($_[0]);
-
-	$semicolon = ";";
-	if ($_[2]) {
+	my $indent = getIndentation($_[0]);
+	my $comment = $_[2]; 
+	my $semicolon = ";";
+	
+	if ($_[3]) {
 		$semicolon = "";
 	}
 
-	return "${indent}${_[1]}${semicolon} $comments\n";
+	if ($comment ne "") {
+		return "${indent}${_[1]}${semicolon} $comment\n";
+	}
+
+	return "${indent}${_[1]}${semicolon}\n";
 }
 
 # create the appropriate list to iterate over
