@@ -11,7 +11,7 @@ sub main {
 	# main loop that reads the file and processes each line
 	while (my $line = <F>) {
 		chomp($line);
-		$line = replaceVariables($line);
+		$line = parseLine($line);
 
 		# if the line can be skipped
 		# shell if and while statements use 2 lines while in perl only 1 line is used
@@ -22,7 +22,7 @@ sub main {
 		# closes brackets
 		# fi, done
 		if (isClosingBracket($line)) {
-			push (@result, formatLine($line, "}"));
+			push (@result, formatLine($line, "}", 1));
 			next;
 		}
 
@@ -33,14 +33,20 @@ sub main {
 
 		# copy comments over
 		if (isComment($line)) { 
-			push (@result, $line);
+			push (@result, "$line\n");
 			next;
 		} 
 
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
 			if ($lhs and $rhs) {
-				push(@result, formatLine($line, "\$$lhs = \'$rhs\'"));
+				# handle $ assignments
+				if ($rhs =~ /^\$/) {
+					push(@result, formatLine($line,"\$$lhs = $rhs"));
+				} else {
+					push(@result, formatLine($line, "\$$lhs = \'$rhs\'"));
+				}
+
 				next;
 			}
 		}
@@ -55,10 +61,37 @@ sub main {
 		if (my ($iterator, $list) = isForLoop($line)) {
 			if ($iterator and $list) {
 				# construct the list
-				$list = createList($list);
+				$list = convertList($list);
 
-				push (@result, formatLine($line, "foreach \$${iterator} \($list\) {"));
+				push (@result, formatLine($line, "foreach \$${iterator} \($list\) {", 1));
 				next;
+			}
+		}
+
+		if (my $condition = isWhileLoop($line)) {
+			push(@result, formatLine($line, "while ($condition) {", 1));
+			next;
+		}
+
+
+		if (my ($statement, $condition) = isIfStatement($line)) {
+			if ($statement){
+				if ($statement eq "else") {
+					push (@result, formatLine($line, "} else {",1));
+					next;
+				}
+
+				if ($condition) {
+					$bracket = "} ";
+					if ($statement eq "if") {
+						$bracket = "";
+					} else {
+						$statement = "elsif";
+					}
+
+					push (@result, formatLine($line, "$bracket$statement $condition {", 1));
+					next;
+				}
 			}
 		}
 
@@ -81,11 +114,19 @@ sub main {
 	exit 0;
 }
 
-# converts special variables
-# eg $1 -> $ARGV[0]
-sub replaceVariables {
+# converts all appropriate variables etc first
+# $1 .. $9 -> $ARGV[0] .. $ARGV[9]
+# $#, $@, $*
+# test, `` and [condition]
+sub parseLine {
 	my $line = $_[0];
 
+	# replace $#, $@ and $*
+	$line =~ s/(\$\@)|(\"\$\@\")/\@ARGV/g;
+	$line =~ s/(\$#)|(\"\$#\")/\$#ARGV/g;
+
+
+	# $1..9
 	while (1) {
 		$line =~ /[^\\]\$([0-9])/;
 		
@@ -100,8 +141,58 @@ sub replaceVariables {
 		$line =~ s/\$$regex/\$ARGV[$idx]/;
 	}
 
+
+	# replace TEST keyword
+	while (1) {
+		$line =~ /.*test (.+)\s*$/;
+
+		if (!$1) {
+			last;
+		}
+
+		# replace the test section
+		$condition = convertTestCondition($1);
+		$regex = quotemeta $1;
+
+		$line =~ s/test $regex/\($condition\)/;
+	}
+
+
+	# replace backticks ``
+	# will just assume backticks are always used with expr
+	while (1) {
+		$line =~ /.*`expr (.+)`\s*$/;
+
+		if (!$1) {
+			last;
+		}
+
+		# replace the backticked section
+		$expr = $1;
+		$regex = quotemeta $1;
+
+		$line =~ s/`expr $regex`/$expr/;
+	}
+
+	# replace [] conditions
+	while (1) {
+		$line =~ /^.*\[ (.+) \].*$/;
+
+		if (!$1) {
+			last;
+		}
+
+		# replace brackets with if condition
+		$condition = convertTestCondition($1);
+		$regex = quotemeta "$1";
+
+		$line =~ s/\[ $regex \]/\($condition\)/;
+	}
+
 	return $line;
 }
+
+
 
 # checks if it is a header file
 sub isHeader {
@@ -115,6 +206,21 @@ sub isComment {
 	}
 
 	return $_[0] =~ /^\s*#+/;
+}
+
+sub isWhileLoop {
+	$_[0] =~ /^\s*while \((.+)\)/;
+	return $1;
+}
+
+# checks if a line is an if statement
+sub isIfStatement {
+	if ($_[0] =~ /^\s*else/) {
+		return "else", "";
+	}
+
+	$_[0] =~ /(^\s*(if)|(elif)) (\(.+\))/;
+	return $1, $4;
 }
 
 # checks if a given line is assigning a variable
@@ -149,28 +255,47 @@ sub isBuiltinFunction {
 		$line2 = formatLine($line, "chomp \$$var");
 
 		return "$line1\n$line2"; 
-		# $indent = getIndentation($line);
-		# return "$indent\$$var = <STDIN>;\n${indent}chomp \$$var;\n";
 	}
 
 	# cd
 	if (my $dir = isChangeDir($line)) {
 		return formatLine($line, "chdir '$dir'");
-
-		# $indent = getIndentation($line);
-		# return "${indent}chdir '$dir';\n";
 	}
 
 	# test 
+
 
 	# expr
 
 	# echo
 	if (my $arguments = isPrint($line)) {
-		return formatLine($line, "print \"$arguments\\n\"");
-		# $indent = getIndentation($line);
-		# return "${indent}print \"$arguments\\n\";\n";
+		$arguments = createPrintString($arguments);
+		return formatLine($line, "print \"$arguments\"");
 	}	
+}
+
+# constructs a string to print
+# adds the appropriate escape to quotes
+sub createPrintString {
+	$string = $_[0];
+	$newline = 1;
+
+	# check for -n flag
+	if ($string =~ s/^-n //) {
+		$newline = 0;
+	}
+
+	# first remove the leading and trailing quotes if they exist
+	$string =~ s/^((\')|(\"))|((\')|(\"))$//g;
+
+	# the rest must be escaped
+	$string =~ s/\"/\\\"/g;
+
+	if ($newline) {
+		$string = "$string\\n";
+	}
+
+	return "$string";
 }
 
 # skip the line
@@ -236,11 +361,16 @@ sub formatLine {
 	$indent = getIndentation($_[0]);
 	$comments = getIndentation($_[0]);
 
-	return "${indent}${_[1]}; $comments\n";
+	$semicolon = ";";
+	if ($_[2]) {
+		$semicolon = "";
+	}
+
+	return "${indent}${_[1]}${semicolon} $comments\n";
 }
 
 # create the appropriate list to iterate over
-sub createList {
+sub convertList {
 	$list = $_[0];
 
 	# remove trailing spaces
@@ -258,4 +388,73 @@ sub createList {
 
 	return "\'$list\'";	
 }
+
+# converts shell test keyword to perl logic
+sub convertTestCondition {
+	$test = $_[0];
+
+	# x = y format
+	if ($test =~ /(.+) (=|!=|<=>|<|>|<=|>=) (.+)\s*$/) {
+		# check what the comparison is
+		$operation = $2;
+		$comparator = "";
+
+		if ($operation eq "=") {
+			$comparator = "eq";
+		} elsif ($operation eq "!=") {
+			$comparator = "ne" 
+		} elsif ($operation eq "<=>") {
+			$comparator = "cmp" 
+		} elsif ($operation eq "<") {
+			$comparator = "lt" 
+		} elsif ($operation eq ">") {
+			$comparator = "gt" 
+		} elsif ($operation eq "<=") {
+			$comparator = "le" 
+		} elsif ($operation eq ">=") {
+			$comparator = "ge" 
+		} 
+
+		return "\'$1\' $comparator \'$3\'";
+	}
+
+
+	# x <operator> y format. operation (eq|ne|lt|gt|le|ge|)
+	if ($test =~ /(.+) -(eq|ne|cmp|lt|gt|le|ge) (.+)\s*$/) {
+		$comparator = $2;
+		$operator = "";
+
+		if ($comparator eq "eq") {
+			$operator = "=";
+		} elsif ($comparator eq "ne") {
+			$operator = "!=";
+		} elsif ($comparator eq "cmp") {
+			$operator = "<=>";
+		} elsif ($comparator eq "lt") {
+			$operator = "<";
+		} elsif ($comparator eq "gt") {
+			$operator = ">";
+		} elsif ($comparator eq "le") {
+			$operator = "<=";
+		} elsif ($comparator eq "ge") {
+			$operator = ">=";
+		}
+
+		return "$1 $operator $3";
+	}
+
+	# -r flag
+	if ($test =~ /^-r (.+)\s*$/) {
+		return "-r \'$1\'";
+	}
+
+	# -d flag
+	if ($test =~ /^-d (.+)\s*$/) {
+		return "-d \'$1\'";
+	}
+
+	return;
+	# we shouldn't actually get here
+}
+
 main()

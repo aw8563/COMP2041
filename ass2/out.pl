@@ -1,4 +1,14 @@
 #!/usr/bin/perl -w
-foreach $c_file (glob("*.c")) {; 
-    print "gcc -c $c_file\n";     
-}; 
+# print a contiguous integer sequence
+$start = $ARGV[0]; 
+$finish = $ARGV[1]; 
+
+$number = $start; 
+while ($number <= $finish) { 
+    print "$number\n";     
+    $number = $number + 1;     
+} 
+
+if (-r 'nonexistantfile') { 
+    print "b\n";     
+} 
