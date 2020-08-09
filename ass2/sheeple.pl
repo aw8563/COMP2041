@@ -520,7 +520,20 @@ sub convertTestCondition {
 			$comparator = "ge" 
 		} 
 
-		return "\'$1\' $comparator \'$3\'";
+		# remove the outer quotes if they exist
+		$lhs = $1;
+		$rhs = $3;
+
+		# check if string is quoted or has $sign.
+		# we do NOT want quote this in perl then
+		if (!($lhs =~ /^\'.*\'$/ or $lhs =~ /^\".*\"$/ or $lhs =~ /^\$/)) {
+			$lhs = "\'$lhs\'";
+		}
+		if (!($rhs =~ /^\'.*\'$/ or $rhs =~ /^\".*\"$/ or $rhs =~ /^\$/)) {
+			$rhs = "\'$rhs\'";			
+		}
+		# check if what we are comparing with has quotes 
+		return "$lhs $comparator $rhs";
 	}
 
 
@@ -545,6 +558,7 @@ sub convertTestCondition {
 			$operator = ">=";
 		}
 
+		# only works with numbers
 		return "$1 $operator $3";
 	}
 
@@ -558,8 +572,9 @@ sub convertTestCondition {
 		return "-d \'$1\'";
 	}
 
-	return;
-	# we shouldn't actually get here
+	# doesn't match anything so we just take the test case literally
+	# eg [ 1 ], test 1
+	return $test;
 }
 
 main()

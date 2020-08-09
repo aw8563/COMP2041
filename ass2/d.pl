@@ -1,6 +1,8 @@
 #!/usr/bin/perl -w
 # print a contiguous integer sequence
 
-$a = `ls`;
+if (system "ls") {
+	
+}
 
-print $a;
+# print $a[0];

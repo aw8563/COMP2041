@@ -1,15 +1,18 @@
 #!/bin/dash
-#!/bin/dash
-echo 'When old age shall this generation waste,'
-echo 'Thou shalt remain, in midst of other woe'
-echo 'Than ours, a friend to man, to whom thou sayst,'
-echo '"Beauty is truth, truth beauty",  -  that is all'
-echo 'Ye know on earth, and all ye need to know.'
 
-i=0
-j=5
-while test $i -lt $j
+while [ 1 ]
 do
-   	echo $i
-    i=$((i + 1))
-done
+        read line
+        echo $line
+
+        if test $line = q
+        then
+                echo "FINISH"
+                exit
+        elif test $line = "JKLDSJFLKSJDFKL"
+        then
+                echo "????"
+        else
+                echo "q to quit"
+        fi
+done               
