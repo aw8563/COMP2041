@@ -14,6 +14,7 @@ sub main {
 		# header line
 		if (isHeader($line)) {
 			push (@result, "#!/usr/bin/perl -w\n");
+			push (@result, "\$_argv = \$#ARGV + 1; # hack to get \$#\n\n"); # hacky way of getting argv
 			next;
 		}
 
@@ -43,11 +44,24 @@ sub main {
 
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
-			if ($lhs and $rhs and "$lhs" ne "" and "$rhs" ne "") {
+			if (defined $lhs and defined $rhs and "$lhs" ne "" and "$rhs" ne "") {
 				my $final = "";
 
-				# assigning to a string with quotes/variable/number
-				if ($rhs =~ /^\$/ or $rhs =~ /^[0-9]+$/ or $rhs =~ /^\".*\"/) {
+				if ($rhs =~ /^\$\(\((.+)\)\)/) { # $(()) case
+					# replace all varialbles from rhs with $ sign
+					my @split = split("\\s", $1);
+					foreach(@split) {
+						if ($_ =~ "^[_a-zA-Z]") {
+							$final = "${final}\$$_ ";
+						} else {
+							$final = "${final}$_ ";
+						}
+					}
+					$final = "\$$lhs = ${final}";
+
+				} elsif ($rhs =~ /^\$\((.+)\)/) { # $() case
+					$final = "\$$lhs = `$1`";
+				} elsif ($rhs =~ /^\$/ or $rhs =~ /^[0-9]+$/ or $rhs =~ /^\".*\"/ or $rhs =~ /^`.*`/) { #quotes/variable/number
 					$final = "\$$lhs = $rhs";
 				} else { # assigning to a string without quotes
 					$final = "\$$lhs = \'$rhs\'"
@@ -118,7 +132,7 @@ sub main {
 
 	open (OUT, ">", "out.pl") or die $!;
 	foreach(@result) {
-		print "$_";
+		print OUT "$_";
 	}
 	close(OUT);
 
@@ -126,30 +140,33 @@ sub main {
 }
 
 # converts all appropriate variables etc first
-# $1 .. $9 -> $ARGV[0] .. $ARGV[9]
+# $1 ..  -> $ARGV[0] ..
 # $#, $@, $*
 # test, `` and [condition]
 sub parseLine {
 	my $line = $_[0]; #
 
+
 	# remove trailing comments first
-	# make sure that the '#' is not enclosed within quotes
+	# make sure that the '#' is not enclosed within quotes and is not part of $#
 	my $nQuotes = 0;
 	my $idx = 0;
 	my $found = 0;
+	my $prev = "";
 
 	foreach $char (split //, $line) {
  		if ($char eq "\'" or $char eq "\"") {
  			$nQuotes++;
  		}
 
- 		if ($char eq "#" and $nQuotes%2 == 0) {
+ 		if ($char eq "#" and $nQuotes%2 == 0 and $prev ne "\$") {
  			$found = 1;
  			last;
  		}
 
+ 		$prev = "$char";
  		$idx++;
-	}	
+	}		
 
 	my $comment = "";
 
@@ -168,74 +185,64 @@ sub parseLine {
 			$line =~ s/$regex$//;
 		}
 	}
-
+	
 
 	# replace $#, $@ and $*
 	$line =~ s/(\$\@)|(\"\$\@\")/\@ARGV/g;
-	$line =~ s/(\$#)|(\"\$#\")/\$#ARGV/g;
+	$line =~ s/(\$#)|(\"\$#\")/\$_argv/g;
 
-
-	# $1..9
+	# $1..
 	while (1) {
-		$line =~ /[^\\]\$([0-9])/;
-		
-		# no more replacements
-		if (!$1) {
-			last;
-		} 
+		$match = $line =~ /\$([0-9]+)/;
 
-		$idx = $1 - 1;
-		$regex = quotemeta $1;
+		if ($line =~ /\$([0-9]+)/) {
+			$idx = $1 - 1;
+			$regex = quotemeta $1;
 
-		$line =~ s/\$$regex/\$ARGV[$idx]/;
-	}
-
-
-	# replace TEST keyword
-	while (1) {
-		$line =~ /.*test (.+)\s*$/;
-
-		if (!$1) {
+			$line =~ s/\$$regex/\$ARGV[$idx]/;
+		} else {
 			last;
 		}
 
-		# replace the test section
-		$condition = convertTestCondition($1);
-		$regex = quotemeta $1;
-
-		$line =~ s/test $regex/\($condition\)/;
 	}
 
+	# replace TEST keyword
+	while (1) {
+		if ($line =~ /.*test (.+)\s*$/) {
+			# replace the test section
+			$condition = convertTestCondition($1);
+			$regex = quotemeta $1;
+
+			$line =~ s/test $regex/\($condition\)/;
+		} else {
+			last;
+		}
+	}
 
 	# replace backticks ``
 	# will just assume backticks are always used with expr
 	while (1) {
-		$line =~ /.*`expr (.+)`\s*$/;
-
-		if (!$1) {
+		if ($line =~ /.*`expr (.+)`\s*$/) {
+			# replace the backticked section
+			$expr = $1;
+			$regex = quotemeta $1;
+			$line =~ s/`expr $regex`/$expr/;
+		} else {
 			last;
 		}
-
-		# replace the backticked section
-		$expr = $1;
-		$regex = quotemeta $1;
-
-		$line =~ s/`expr $regex`/$expr/;
 	}
 
 	# replace [] conditions
 	while (1) {
-		$line =~ /^.*\[ (.+) \].*$/;
+		if ($line =~ /^.*\[ (.+) \].*$/) {
+			# replace brackets with if condition
+			$condition = convertTestCondition($1);
+			$regex = quotemeta "$1";
 
-		if (!$1) {
+			$line =~ s/\[ $regex \]/\($condition\)/;
+		} else {
 			last;
 		}
-
-		# replace brackets with if condition
-		$condition = convertTestCondition($1);
-		$regex = quotemeta "$1";
-
-		$line =~ s/\[ $regex \]/\($condition\)/;
 	}
 
 	return $line, $comment;
@@ -288,7 +295,7 @@ sub isForLoop {
 }
 
 # checks if a line is a shell function that requires translation to perl
-# exit read cd test expr echo
+# exit read cd echo. Test and expr is handled during line parsing
 # returns the translated line
 sub isBuiltinFunction {
 	my $line = $_[0];
@@ -311,11 +318,6 @@ sub isBuiltinFunction {
 	if (my $dir = isChangeDir($line)) {
 		return formatLine($line, "chdir '$dir'", $comment);
 	}
-
-	# test 
-
-
-	# expr
 
 	# echo
 	if (my $arguments = isPrint($line)) {
@@ -382,20 +384,21 @@ sub createPrintString {
 		}
 	}
 
+	# construct the final print statement
 	$final = "";
-	foreach(@result) {
+	foreach (@result) {
 		if ($final eq "") {
-			$final = "\"$_\"";
+			$final = "$_";
 		} else {
-			$final = "$final, \" $_\"";
+			$final = "$final $_";
 		}
 	}
-
+ 
 	if ($newline) {
-		$final = "$final, \"\\n\"";
+		$final = "${final}\\n";
 	}
 
-	return $final;
+	return "\"$final\"";
 }
 
 # skip the line
