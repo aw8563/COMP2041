@@ -1,27 +1,5 @@
-/dev
-Houston -- Houston
-/dev
-Houston -- 1202
-/dev
-Houston -- alarm
-/dev
-1202 -- Houston
-/dev
-1202 -- 1202
-/dev
-1202 -- alarm
-/dev
-alarm -- Houston
-/dev
-alarm -- 1202
-/dev
-alarm -- alarm
-a.txt
-b.txt
-c.txt
-exp
-out
-out.pl
-run.sh
-sheeple.pl
-test.sh
+0
+1
+2
+3
+4

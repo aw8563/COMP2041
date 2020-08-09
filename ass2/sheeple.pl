@@ -43,15 +43,17 @@ sub main {
 
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
-			if ($lhs and $rhs) {
+			if ("$lhs" ne "" and "$rhs" ne "") {
+				my $final = "";
 
-				# handle assigning to another varaible/string
-				if ($rhs =~ /^\$/) {
-					push(@result, formatLine($line,"\$$lhs = $rhs", $comment));
-				} else {
-					push(@result, formatLine($line, "\$$lhs = \'$rhs\'", $comment));
+				# assigning to a string with quotes/variable/number
+				if ($rhs =~ /^\$/ or $rhs =~ /^[0-9]+$/ or $rhs =~ /^\".*\"/) {
+					$final = "\$$lhs = $rhs";
+				} else { # assigning to a string without quotes
+					$final = "\$$lhs = \'$rhs\'"
 				}
 
+				push(@result, formatLine($line, $final, $comment));
 				next;
 			}
 		}
@@ -318,32 +320,82 @@ sub isBuiltinFunction {
 	# echo
 	if (my $arguments = isPrint($line)) {
 		$arguments = createPrintString($arguments);
-		return formatLine($line, "print \"$arguments\"", $comment);
+		return formatLine($line, "print $arguments", $comment);
 	}	
 }
 
 # constructs a string to print
 # adds the appropriate escape to quotes
 sub createPrintString {
-	$string = $_[0];
+	# add a trailing space to make parsing easier!
+	$string = "$_[0] ";
 	$newline = 1;
+
+	my @result = ();
 
 	# check for -n flag
 	if ($string =~ s/^-n //) {
 		$newline = 0;
 	}
 
-	# first remove the leading and trailing quotes if they exist
-	$string =~ s/^((\')|(\"))|((\')|(\"))$//g;
+	while (1) {
+		# check quotes
+		if ($string =~ "^\\s*\"([^\"]*)\"") {
+			# need to escape ' and "
+			$match = $1;
+			$arg = $1;
+			$arg =~ s/\"/\\\"/g;
+			$arg =~ s/\'/\\\'/g;
 
-	# the rest must be escaped
-	$string =~ s/\"/\\\"/g;
+			push(@result, $arg);
 
-	if ($newline) {
-		$string = "$string\\n";
+			$regex = quotemeta $match;
+			$string =~ s/\"$regex\"//;
+			next;
+		}
+
+		# check quotes
+		if ($string =~ "^\\s*\'([^\']*)\'") {
+			# need to escape ' and "
+			$match = $1;
+			$arg = $1;
+
+			$arg =~ s/\"/\\\"/g;
+			$arg =~ s/\'/\\\'/g;
+			
+			push(@result, $arg);
+			$regex = quotemeta $match;
+			$string =~ s/\'$regex\'//;
+
+			next;
+		}
+
+		# nothing left
+		if ($string =~ /^\s*$/) {
+			last;
+		}
+
+		if ($string =~ "^\\s*([^\\s]*)(\\s+)") {
+			push(@result, $1);
+			$regex = quotemeta $1;
+			$string =~ s/$regex //;			
+		}
 	}
 
-	return "$string";
+	$final = "";
+	foreach(@result) {
+		if ($final eq "") {
+			$final = "\"$_\"";
+		} else {
+			$final = "$final, \" $_\"";
+		}
+	}
+
+	if ($newline) {
+		$final = "$final, \"\\n\"";
+	}
+
+	return $final;
 }
 
 # skip the line
@@ -421,17 +473,22 @@ sub convertList {
 	# remove trailing spaces
 	$list =~ s/\s*$//g;
 
-	# directory
-	if ($list =~ /^\*/) {
-		return "glob(\"$list\")";
+	# split by space
+	my @split = split(" ", $list);
+	my $result = "";
+
+
+	foreach(@split) {
+		# glob it
+		if ($_ =~ "[\*\[\?]") {
+			$result = "${result}glob(\'$_\'), ";
+		} else { # no glob 
+			$result = "$result\'$_\', ";
+		}
 	}
 
-	# list of items.
 
-	# replace spaces with "', '"
-	$list =~ s/\s/\', \'/g;
-
-	return "\'$list\'";	
+	return $result;	
 }
 
 # converts shell test keyword to perl logic
