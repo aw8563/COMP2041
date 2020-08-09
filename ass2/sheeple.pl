@@ -43,7 +43,7 @@ sub main {
 
 		# variable assignment
 		if (my ($lhs, $rhs) = isAssign($line)) {
-			if ("$lhs" ne "" and "$rhs" ne "") {
+			if ($lhs and $rhs and "$lhs" ne "" and "$rhs" ne "") {
 				my $final = "";
 
 				# assigning to a string with quotes/variable/number
@@ -118,7 +118,7 @@ sub main {
 
 	open (OUT, ">", "out.pl") or die $!;
 	foreach(@result) {
-		print OUT "$_";
+		print "$_";
 	}
 	close(OUT);
 
@@ -302,7 +302,7 @@ sub isBuiltinFunction {
 	# read
 	if (my $var = isRead($line)) {
 		$line1 = formatLine($line, "\$$var = <STDIN>", $comment);
-		$line2 = formatLine($line, "chomp \$$var");
+		$line2 = formatLine($line, "chomp \$$var", $comment);
 
 		return "$line1\n$line2"; 
 	}
