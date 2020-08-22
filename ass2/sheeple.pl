@@ -51,7 +51,7 @@ sub main {
 					# replace all varialbles from rhs with $ sign
 					my @split = split("\\s", $1);
 					foreach(@split) {
-						if ($_ =~ "^[_a-zA-Z]") {
+						if ($_ =~ /^[_a-zA-Z]/) {
 							$final = "${final}\$$_ ";
 						} else {
 							$final = "${final}$_ ";
@@ -342,12 +342,14 @@ sub createPrintString {
 
 	while (1) {
 		# check quotes
-		if ($string =~ "^\\s*\"([^\"]*)\"") {
+		if ($string =~ /^\s*\"([^\"]*)\"/) {
 			# need to escape ' and "
 			$match = $1;
 			$arg = $1;
 			$arg =~ s/\"/\\\"/g;
 			$arg =~ s/\'/\\\'/g;
+
+			print ">$arg<\n";
 
 			push(@result, $arg);
 
@@ -357,7 +359,7 @@ sub createPrintString {
 		}
 
 		# check quotes
-		if ($string =~ "^\\s*\'([^\']*)\'") {
+		if ($string =~ /^\s*\'([^\']*)\'/) {
 			# need to escape ' and "
 			$match = $1;
 			$arg = $1;
@@ -377,16 +379,18 @@ sub createPrintString {
 			last;
 		}
 
-		if ($string =~ "^\\s*([^\\s]*)(\\s+)") {
+		if ($string =~ /^\s*([^\s]+)(\s+)/) {
 			push(@result, $1);
 			$regex = quotemeta $1;
 			$string =~ s/$regex //;			
 		}
 	}
 
+
 	# construct the final print statement
 	$final = "";
 	foreach (@result) {
+		print "|$_|\n";
 		if ($final eq "") {
 			$final = "$_";
 		} else {
@@ -483,7 +487,7 @@ sub convertList {
 
 	foreach(@split) {
 		# glob it
-		if ($_ =~ "[\*\[\?]") {
+		if ($_ =~ /[\*\[\?]/) {
 			$result = "${result}glob(\'$_\'), ";
 		} else { # no glob 
 			$result = "$result\'$_\', ";

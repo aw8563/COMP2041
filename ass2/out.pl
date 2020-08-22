@@ -2,18 +2,6 @@
 $_argv = $#ARGV + 1; # hack to get $#
 
 
-while (1) {
-        $line = <STDIN>;
+# testing echo with a combination of single/double/no quotes with spaces
 
-        chomp $line;
-        print "$line\n";
-
-        if ($line eq 'q') {
-                print "FINISH\n";
-                exit;
-        } elsif ($line eq "JKLDSJFLKSJDFKL") {
-                print "????\n";
-        } else {
-                print "q to quit\n";
-        }
-}
+print "a b   a\n";

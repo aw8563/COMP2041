@@ -1,0 +1,2392 @@
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+server: Apache
+x-ua-compatible: IE=edge
+x-akamai-transformed: 9 - 0 pmb=mRUM,2
+cache-control: no-cache
+expires: Tue, 11 Aug 2020 08:51:06 GMT
+date: Tue, 11 Aug 2020 08:51:06 GMT
+server-timing: cdn-cache; desc=HIT
+server-timing: edge; dur=1
+
+
+<!DOCTYPE HTML>
+<html lang="en-AU">
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    
+    <meta name="description" content="The University of Sydney is one of the best universities in Australia, and is consistently ranked in the top 50 universities in the world. Start your journey here."/>
+    
+    
+    
+    
+    <link href="/etc/designs/corporate.css" rel="stylesheet" type="text/css"/>
+
+    
+
+
+
+
+
+
+
+
+    
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	
+    
+<link rel="stylesheet" href="/etc/designs/corporate-commons/clientlibs/frontend-css.f5ca46f47ff67bf04c7f2125ededc7a3.css" type="text/css">
+
+
+
+	
+    
+<script type="text/javascript" src="/etc/designs/corporate-commons/clientlibs/browser-compatibility.54e36e9416b4677192b01866cf3b3391.js"></script>
+<script type="text/javascript" src="/etc/designs/corporate-commons/clientlibs/jquery.577ddf6779040ea52503746fdeece2ce.js"></script>
+
+
+
+	
+	
+	
+
+	
+		<meta name="DC.Created" content="2020-08-07"/>
+	
+	
+	<meta name="google-site-verification" content="FicMLRy30eyM2MMmnBgnMozHQtXFS78YgnKHpGCcTVE"/>
+	<meta name="google-site-verification" content="x3Z27qQGZ9nrjlRvhgiLO1vfwjCKMnNPBGgXfutaROI"/>
+	<meta name="alexaVerifyID" content="Q2-0ySF2g20GteljJn9AeJRV01k"/>
+
+	
+	
+
+	
+    
+    
+    
+    
+        <script type="text/javascript" src="//assets.adobedtm.com/launch-EN7864de5a79ab4b268374ccd33f654c93.min.js" async></script>
+    
+
+
+
+	
+	<meta property="fb:admins" content="5755052206"/>
+	<meta property="og:site_name" content="The University of Sydney"/>
+	
+	<meta property="og:type" content="website"/>
+	<meta property="fb:app_id" content="2237644793183672"/>
+
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:site" content="@Sydney_Uni"/>
+	<meta name="twitter:title" content="Home"/>
+	<meta name="twitter:description" content="The University of Sydney is one of the best universities in Australia, and is consistently ranked in the top 50 universities in the world. Start your journey here."/>
+
+	<meta property="og:title" content="Home"/>
+	<meta property="og:description" content="The University of Sydney is one of the best universities in Australia, and is consistently ranked in the top 50 universities in the world. Start your journey here."/>
+	<meta property="og:url" content="https://www.sydney.edu.au/home.html"/>
+
+	
+
+	
+	
+	<meta property="og:image" content="https://www.sydney.edu.au/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg"/>
+	<meta property="og:image:secure_url" content="https://www.sydney.edu.au/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg"/>
+	<meta name="twitter:image" content="https://www.sydney.edu.au/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg"/>
+	
+
+	
+
+	
+
+	<link rel="icon" type="image/png" href="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/favicon/favicon-16x16.png" sizes="16x16"/>
+	<link rel="icon" type="image/png" href="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/favicon/favicon-32x32.png" sizes="32x32"/>
+	<link rel="icon" type="image/png" href="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/favicon/favicon-96x96.png" sizes="96x96"/>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/etc/designs/corporate-commons/favicon.ico"/>
+	<link rel="canonical" href="https://sydney.edu.au"/>
+
+    
+
+    <title>Home - The University of Sydney</title>
+  <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false"}]);</script>
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="A4RTF-DAF4K-SCGBL-RB8WP-FXDUD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"A4RTF-DAF4K-SCGBL-RB8WP-FXDUD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="oldbnw6l2ve54xzslp5a-f-de03c59db-clientnsv4-s.akamaihd.net",i={"ak.v":"28","ak.cp":"937904","ak.ai":parseInt("601944",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"h2","ak.rid":"29b7db1","ak.r":25348,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"114.198.22.0","ak.cport":52202,"ak.gh":"203.213.73.218","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1597135866","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==lUCw1vrdsbtEUh1Y1dKNB4Rc3BlqDrSSX2njMSLaG+LSG57wURhdkFuObi+L24Ef/TvHw2gqyANSyOeDSIbvP5QEw3kb7jx4DU4PeiqdYUph5n7q8hkE2D7QlkUjWtRe0rEnjzlzNb6rxemg95GkRHByMC5ZhkNKFb4QJiuLTp67PMwS1EDTt3cw+F3XpVALt35Oj/Dfny6v04AcYHoz2L50OYho2foPO2V4HSQ5P8XaGTnfkcrXbnXX5VH+0PULv7wKG7+HbeJoJLWGwNV8gb3AUlrdxjJpPBbfDfH3sQZ9X7ZD5i7usPgcULF8vE+7hcRxCEImaYa5ZEAknuiPPQ1ptbvAlXC3rAoVz3Lpr6TYaBMfdk9U0DWxuf/X2n9pL8Ec6C2VHHIX7/fX5fYcM8AnGH/QrJr8p8+ODMZKT4E=","ak.pv":"35","ak.dpoabenc":""};if(""!==t)i["ak.ruds"]=t;var _={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!_.i){var a=BOOMR.subscribe;a("before_beacon",_.av,null,null),a("onbeacon",_.rv,null,null),_.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+    <body>
+
+
+
+<div class="pageWrapper pageTemplate1 homePage b-js-anchor-scroll-hack">
+
+    
+    
+
+    
+
+
+
+    
+    
+    
+    <div class="mobileNavigationModule">
+        <div class="mobileNavigationMenus">
+            
+    
+        <div>
+
+
+<!--noindex-->
+<nav role="navigation" class="leftHandNavigationModule" aria-label="Section menu">
+    
+    
+    
+    
+	
+	<ul role="menubar" class="menu">
+		
+		<li class="active menuItem" role="presentation">
+            
+                <a data-value="Home" id="mobile-navigation-home" role="menuitem" href="https://www.sydney.edu.au/home.html" class="mobile-navigation-home menuItemLabel">
+				Home
+			</a>
+			
+			
+		</li>
+	
+		
+		<li class="hasChildren menuItem" role="presentation">
+            
+                <a data-value="Study" id="mobile-navigation-study" role="menuitem" href="https://www.sydney.edu.au/study.html" class="mobile-navigation-study menuItemLabel">
+				Study
+			</a>
+			
+			
+		</li>
+	
+		
+		<li class="hasChildren menuItem" role="presentation">
+            
+                <a data-value="Research" id="mobile-navigation-research" role="menuitem" href="https://www.sydney.edu.au/research.html" class="mobile-navigation-research menuItemLabel">
+				Research
+			</a>
+			
+			
+		</li>
+	
+		
+		<li class="hasChildren menuItem" role="presentation">
+            
+                <a data-value="Engage with us" id="mobile-navigation-engage-with-us" role="menuitem" href="https://www.sydney.edu.au/engage.html" class="mobile-navigation-engage-with-us menuItemLabel">
+				Engage with us
+			</a>
+			
+			
+		</li>
+	
+		
+		<li class="hasChildren menuItem" role="presentation">
+            
+                <a data-value="About us" id="mobile-navigation-about-us" role="menuitem" href="https://www.sydney.edu.au/about-us.html" class="mobile-navigation-about-us menuItemLabel">
+				About us
+			</a>
+			
+			
+		</li>
+	
+		
+		<li class="hasChildren menuItem" role="presentation">
+            
+                <a data-value="News &amp; opinion" id="mobile-navigation-news--opinion" role="menuitem" href="https://www.sydney.edu.au/news-opinion/news.html" class="mobile-navigation-news--opinion menuItemLabel">
+				News &amp; opinion
+			</a>
+			
+			
+		</li>
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	</ul>
+
+</nav>
+<!--endnoindex-->
+
+
+</div>
+        
+    
+
+
+            
+            
+    
+        <!--noindex-->
+<div class="topNavItems">
+    <div>
+    	
+        <a data-value="University home" id="topNav-university-home" class="topNav-university-home" href="https://www.sydney.edu.au/home.html">
+            University home
+        </a>
+    </div>
+    
+        <div>
+    		
+            <a data-value="Library" id="topNav-library" class="topNav-library" href="http://sydney.edu.au/library/">
+                Library
+            </a>
+        </div>
+    
+        <div>
+    		
+            <a data-value="Current students" id="topNav-current-students" class="topNav-current-students" href="https://www.sydney.edu.au/students/home.html">
+                Current students
+            </a>
+        </div>
+    
+        <div>
+    		
+            <a data-value="Staff intranet" id="topNav-staff-intranet" class="topNav-staff-intranet" href="https://intranet.sydney.edu.au">
+                Staff intranet
+            </a>
+        </div>
+    
+        <div>
+    		
+            <a data-value="Give" id="topNav-give" class="topNav-give" href="https://www.sydney.edu.au/engage/give.html">
+                Give
+            </a>
+        </div>
+    
+</div>
+<!--endnoindex-->
+        
+    
+
+        </div>
+    </div>
+
+
+<!--noindex-->
+<a class="skip-main" href="#skip-to-content" tabindex="1">Skip to main content</a>
+
+
+
+    
+        
+<header class="desktop hidden-xs hidden-sm" role="navigation" aria-label="Utility">
+    <div class="topNav" role="presentation">
+        <div class="container" role="presentation">
+            <div class="row" role="presentation">
+                <div class="col-sm-12" role="presentation">
+                    <ul class="content" role="menubar">
+                        
+                            <li role="menuitem">
+    							
+                                <a data-value="Library" id="topNav-library" href="http://sydney.edu.au/library/" class="topNav-library " tabindex="1">
+                                    Library
+                                </a>
+                            </li>
+
+                        
+                            <li role="menuitem">
+    							
+                                <a data-value="Current students" id="topNav-current-students" href="https://www.sydney.edu.au/students/home.html" class="topNav-current-students " tabindex="1">
+                                    Current students
+                                </a>
+                            </li>
+
+                        
+                            <li role="menuitem">
+    							
+                                <a data-value="Staff intranet" id="topNav-staff-intranet" href="https://intranet.sydney.edu.au" class="topNav-staff-intranet " tabindex="1">
+                                    Staff intranet
+                                </a>
+                            </li>
+
+                        
+                            <li role="menuitem">
+    							
+                                <a data-value="Give" id="topNav-give" href="https://www.sydney.edu.au/engage/give.html" class="topNav-give last" tabindex="1">
+                                    Give
+                                </a>
+                            </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        
+    
+
+
+<div class="globalHeaderModule b-js-stickler" data-stay-inside="body" data-sticky-class="stuck">
+	<div class="b-js-stickler-wrapper">
+		<div class="primaryNavigation">
+
+			
+<header class="mobile hidden-md hidden-lg">
+    <div class="tabletContainer">
+        <a href="#" class="hamburgerIcon" tabindex="2" title="Toggle the side menu">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+            <span class="glyphicon glyphicon-remove"></span>
+            <span class="sr-only" aria-hidden="true">Toggle the side menu</span>
+        </a>
+        <a href="https://www.sydney.edu.au/home.html" tabindex="1">
+            <img class="unilogo" alt="University of Sydney" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/USydLogo.svg" onerror="this.src='/etc/designs/corporate/img/USydLogo.png';this.onerror=null;"/>
+        </a>
+        <a href="javascript:void(0);" class="searchIcon" tabindex="1" title="Search for courses, people, events and everything else ...">
+            <span class="glyphicon glyphicon-search"></span>
+            <span class="sr-only" aria-hidden="true">Search for Courses</span>
+        </a>
+    </div>
+</header>
+
+			
+<div class="searchDropDownContainer">
+    <div class="container">
+        <form class="searchDropDown" action="/s/search.html" method="get" role="search">
+            <input type="hidden" name="collection" value="Usyd"/>
+
+            <div class="row mobileRow hidden-md hidden-lg">
+                <a href="#" class="hamburgerIcon"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+                <a href="https://www.sydney.edu.au/home.html" tabindex="1">
+                    <img class="unilogo" alt="University of Sydney" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/USydLogoBlack.svg" onerror="this.src='/etc/designs/corporate/img/USydLogoBlack.png';this.onerror=null;"/>
+                </a>
+                <a href="javascript:void(0);" class="closeIcon"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+
+            <div class="row desktopRow hidden-xs hidden-sm">
+                <div class="col-sm-2">
+                    <a href="https://www.sydney.edu.au/home.html">
+                        <img class="unilogo" alt="University of Sydney" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/USydLogoBlack.svg" onerror="this.src='/etc/designs/corporate/img/USydLogoBlack.png';this.onerror=null;"/>
+                    </a>
+                </div>
+                <div class="col-sm-10">
+                    <a href="#" class="closeIcon" title="Close search">
+                        <div class="glyphicon glyphicon-remove"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row searchRow">
+                <div class="col-xs-12">
+                    <label class="typeToSearch" for="searchQuery">Type to search</label>
+                    <div class="input">
+                        <input class="searchInput" name="query" id="searchQuery" autocomplete="off" aria-describedby="searchHint" type="text" placeholder="" pattern="^[aA-zZ\d][aA-zZ\d\s]*" oninvalid="setCustomValidity('Please enter some text without special characters to search');" oninput="setCustomValidity('');$(this).val($(this).val().trimStart());" required/>
+                    </div>
+                    <div class="description" id="searchHint">Search for courses, people, events and everything else ...</div>
+                    <div class="radioButtons">
+                        <div class="styledRadioButton">
+                            <label for="coursesRadio">
+                                <input type="radio" name="f.Content type|x" value="courses" id="coursesRadio"/>
+                                <span class="radioLabel">Courses</span>
+                            </label>
+                        </div>
+                        <div class="styledRadioButton">
+                            <label for="studentsRadio">
+                                <input type="radio" name="f.Content type|x" value="current students" id="studentsRadio"/>
+                                <span class="radioLabel">Students</span>
+                            </label>
+                        </div>
+                        <div class="styledRadioButton">
+                            <label for="allContentRadio">
+                                <input type="radio" name="f.Content type|x" value="" id="allContentRadio"/>
+                                <span class="radioLabel">All content</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submitButton">
+                        <button class="b-button b-search-button b-search-button--primary" type="submit">
+                            <span class="b-search-button__text">Search</span>
+                            <span class="b-icon b-icon--search b-search-button__icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+			
+
+  
+
+ 
+ <header class="desktop hidden-xs hidden-sm">
+	<div class="mainNav">
+		<div class="row">
+			<div class="col-sm-2">
+     
+
+    <a data-value="University of Sydney" id="global-navigation-university-of-sydney" class="global-navigation-university-of-sydney" href="https://www.sydney.edu.au/home.html"> <img class="unilogo" alt="University of Sydney" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/USydLogo.svg" onerror="this.src='/etc/designs/corporate/img/USydLogo.png';this.onerror=null;"/>
+				</a>
+			</div>
+			<div class="col-sm-10">
+				<nav role="navigation" aria-label="Main menu">
+					<div class="navMenu " role="menubar">
+						
+							<div class="navItem b-js-fly-out-menu-item" role="presentation">
+                            
+								<a data-js-el="button" data-value="Study" id="global-navigation-study" role="menuitem" data-dropdown="#studyDropdown.mainNavDropdown" href="https://www.sydney.edu.au/study.html" class="global-navigation-study ">Study</a>
+								
+								<div data-js-el="panel" class="mainNavDropdown" id="studyDropdown">
+									<div class="row" role="presentation">
+										<div class="col-xs-12" role="presentation">
+											<div class="title" role="menubar">Study</div>
+										</div>
+									</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-find-a-course" data-value="Find a course" role="menuitem" href="https://www.sydney.edu.au/study/search-for-a-course.html" class="global-navigation-find-a-course b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Find a course</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-why-choose-sydney?" data-value="Why choose Sydney?" role="menuitem" href="https://www.sydney.edu.au/study/why-choose-sydney.html" class="global-navigation-why-choose-sydney? b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Why choose Sydney?</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-study-options" data-value="Study options" role="menuitem" href="https://www.sydney.edu.au/study/study-options.html" class="global-navigation-study-options b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Study options</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-how-to-apply" data-value="How to apply" role="menuitem" href="https://www.sydney.edu.au/study/how-to-apply.html" class="global-navigation-how-to-apply b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">How to apply</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-get-ready-for-uni" data-value="Get ready for uni" role="menuitem" href="https://www.sydney.edu.au/study/get-ready-for-uni.html" class="global-navigation-get-ready-for-uni b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Get ready for uni</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-international-students" data-value="International students" role="menuitem" href="https://www.sydney.edu.au/study/international-students.html" class="global-navigation-international-students b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">International students</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-student-accommodation" data-value="Student accommodation" role="menuitem" href="https://www.sydney.edu.au/study/accommodation.html" class="global-navigation-student-accommodation b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Student accommodation</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Study" id="global-navigation-events-for-prospective-students" data-value="Events for prospective students" role="menuitem" href="https://www.sydney.edu.au/study/events-for-prospective-students.html" class="global-navigation-events-for-prospective-students b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Events for prospective students</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+								</div>
+								
+							</div>
+						
+							<div class="navItem b-js-fly-out-menu-item" role="presentation">
+                            
+								<a data-js-el="button" data-value="Research" id="global-navigation-research" role="menuitem" data-dropdown="#researchDropdown.mainNavDropdown" href="https://www.sydney.edu.au/research.html" class="global-navigation-research ">Research</a>
+								
+								<div data-js-el="panel" class="mainNavDropdown" id="researchDropdown">
+									<div class="row" role="presentation">
+										<div class="col-xs-12" role="presentation">
+											<div class="title" role="menubar">Research</div>
+										</div>
+									</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-coronavirus-(covid-19)-research-and-expertise" data-value="Coronavirus (COVID-19) research and expertise" role="menuitem" href="https://www.sydney.edu.au/research/coronavirus-covid-19-research-and-expertise.html" class="global-navigation-coronavirus-(covid-19)-research-and-expertise b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Coronavirus (COVID-19) research and expertise</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-research-areas" data-value="Research areas" role="menuitem" href="https://www.sydney.edu.au/research/research-areas.html" class="global-navigation-research-areas b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Research areas</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-centres-and-institutes" data-value="Centres and institutes" role="menuitem" href="https://www.sydney.edu.au/research/centres.html" class="global-navigation-centres-and-institutes b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Centres and institutes</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-research-impact" data-value="Research impact" role="menuitem" href="https://www.sydney.edu.au/research/research-impact.html" class="global-navigation-research-impact b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Research impact</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-our-researchers" data-value="Our researchers" role="menuitem" href="https://www.sydney.edu.au/research/our-researchers.html" class="global-navigation-our-researchers b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Our researchers</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-facilities" data-value="Facilities" role="menuitem" href="https://www.sydney.edu.au/research/facilities.html" class="global-navigation-facilities b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Facilities</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-funding" data-value="Funding" role="menuitem" href="https://www.sydney.edu.au/research/research-funding.html" class="global-navigation-funding b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Funding</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-partnerships" data-value="Partnerships" role="menuitem" href="https://www.sydney.edu.au/research/research-partnerships.html" class="global-navigation-partnerships b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Partnerships</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-research-degrees" data-value="Research degrees" role="menuitem" href="https://www.sydney.edu.au/research/research-degrees.html" class="global-navigation-research-degrees b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Research degrees</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-clinical-trials" data-value="Clinical trials" role="menuitem" href="https://www.sydney.edu.au/research/clinical-trials.html" class="global-navigation-clinical-trials b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Clinical trials</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-volunteer-for-research-study" data-value="Volunteer for research study" role="menuitem" href="https://www.sydney.edu.au/research/volunteer-for-research-study.html" class="global-navigation-volunteer-for-research-study b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Volunteer for research study</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Research" id="global-navigation-integrity-and-ethics" data-value="Integrity and ethics" role="menuitem" href="https://www.sydney.edu.au/research/research-integrity-and-ethics.html" class="global-navigation-integrity-and-ethics b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Integrity and ethics</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											
+										</div>
+									
+								</div>
+								
+							</div>
+						
+							<div class="navItem b-js-fly-out-menu-item" role="presentation">
+                            
+								<a data-js-el="button" data-value="Engage with us" id="global-navigation-engage-with-us" role="menuitem" data-dropdown="#engageDropdown.mainNavDropdown" href="https://www.sydney.edu.au/engage.html" class="global-navigation-engage-with-us ">Engage with us</a>
+								
+								<div data-js-el="panel" class="mainNavDropdown" id="engageDropdown">
+									<div class="row" role="presentation">
+										<div class="col-xs-12" role="presentation">
+											<div class="title" role="menubar">Engage with us</div>
+										</div>
+									</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-give" data-value="Give" role="menuitem" href="https://www.sydney.edu.au/engage/give.html" class="global-navigation-give b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Give</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-alumni" data-value="Alumni" role="menuitem" href="https://www.sydney.edu.au/engage/alumni.html" class="global-navigation-alumni b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Alumni</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-global-engagement" data-value="Global engagement" role="menuitem" href="https://www.sydney.edu.au/engage/global-engagement.html" class="global-navigation-global-engagement b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Global engagement</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-industry-and-business-partnerships" data-value="Industry and business partnerships" role="menuitem" href="https://www.sydney.edu.au/engage/industry-business-partnerships.html" class="global-navigation-industry-and-business-partnerships b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Industry and business partnerships</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-schools" data-value="Schools" role="menuitem" href="https://www.sydney.edu.au/engage/schools.html" class="global-navigation-schools b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Schools</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-community-engagement" data-value="Community engagement" role="menuitem" href="https://www.sydney.edu.au/engage/community-engagement.html" class="global-navigation-community-engagement b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Community engagement</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-visit-the-university" data-value="Visit the University" role="menuitem" href="https://www.sydney.edu.au/engage/visit.html" class="global-navigation-visit-the-university b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Visit the University</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-events-and-sponsorships" data-value="Events and sponsorships" role="menuitem" href="https://www.sydney.edu.au/engage/events-sponsorships.html" class="global-navigation-events-and-sponsorships b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Events and sponsorships</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="Engage with us" id="global-navigation-contact-the-engagement-team" data-value="Contact the engagement team" role="menuitem" href="https://www.sydney.edu.au/engage/contact.html" class="global-navigation-contact-the-engagement-team b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Contact the engagement team</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											
+										</div>
+									
+								</div>
+								
+							</div>
+						
+							<div class="navItem b-js-fly-out-menu-item" role="presentation">
+                            
+								<a data-js-el="button" data-value="About us" id="global-navigation-about-us" role="menuitem" data-dropdown="#about-usDropdown.mainNavDropdown" href="https://www.sydney.edu.au/about-us.html" class="global-navigation-about-us ">About us</a>
+								
+								<div data-js-el="panel" class="mainNavDropdown" id="about-usDropdown">
+									<div class="row" role="presentation">
+										<div class="col-xs-12" role="presentation">
+											<div class="title" role="menubar">About us</div>
+										</div>
+									</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-our-story" data-value="Our story" role="menuitem" href="https://www.sydney.edu.au/about-us/our-story.html" class="global-navigation-our-story b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Our story</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-our-rankings" data-value="Our rankings" role="menuitem" href="https://www.sydney.edu.au/about-us/our-world-rankings.html" class="global-navigation-our-rankings b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Our rankings</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-vision-and-values" data-value="Vision and values" role="menuitem" href="https://www.sydney.edu.au/about-us/vision-and-values.html" class="global-navigation-vision-and-values b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Vision and values</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-governance-and-structure" data-value="Governance and structure" role="menuitem" href="https://www.sydney.edu.au/about-us/governance-and-structure.html" class="global-navigation-governance-and-structure b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Governance and structure</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-faculties-and-schools" data-value="Faculties and schools" role="menuitem" href="https://www.sydney.edu.au/about-us/faculties-and-schools.html" class="global-navigation-faculties-and-schools b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Faculties and schools</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-campuses" data-value="Campuses" role="menuitem" href="https://www.sydney.edu.au/about-us/campuses.html" class="global-navigation-campuses b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Campuses</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-careers-at-sydney" data-value="Careers at Sydney" role="menuitem" href="https://www.sydney.edu.au/about-us/careers-at-sydney.html" class="global-navigation-careers-at-sydney b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Careers at Sydney</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="About us" id="global-navigation-working-with-the-university" data-value="Working with the University" role="menuitem" href="https://www.sydney.edu.au/about-us/working-with-the-university.html" class="global-navigation-working-with-the-university b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Working with the University</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+								</div>
+								
+							</div>
+						
+							<div class="navItem b-js-fly-out-menu-item" role="presentation">
+                            
+								<a data-js-el="button" data-value="News &amp; opinion" id="global-navigation-news--opinion" role="menuitem" data-dropdown="#news-opinionDropdown.mainNavDropdown" href="https://www.sydney.edu.au/news-opinion/news.html" class="global-navigation-news--opinion ">News &amp; opinion</a>
+								
+								<div data-js-el="panel" class="mainNavDropdown" id="news-opinionDropdown">
+									<div class="row" role="presentation">
+										<div class="col-xs-12" role="presentation">
+											<div class="title" role="menubar">News &amp; opinion</div>
+										</div>
+									</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-news" data-value="News" role="menuitem" href="https://www.sydney.edu.au/news-opinion/news.html" class="global-navigation-news b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">News</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-subscribe" data-value="Subscribe" role="menuitem" href="https://www.sydney.edu.au/news-opinion/subscribe.html" class="global-navigation-subscribe b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Subscribe</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-podcasts" data-value="Podcasts" role="menuitem" href="https://www.sydney.edu.au/news-opinion/podcasts.html" class="global-navigation-podcasts b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Podcasts</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-videos" data-value="Videos" role="menuitem" href="https://www.sydney.edu.au/news-opinion/videos.html" class="global-navigation-videos b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Videos</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-news-archive" data-value="News archive" role="menuitem" href="https://www.sydney.edu.au/news-opinion/news-archive.html" class="global-navigation-news-archive b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">News archive</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-media-contacts" data-value="Media contacts" role="menuitem" href="https://www.sydney.edu.au/news-opinion/media-contacts.html" class="global-navigation-media-contacts b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Media contacts</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+										<div class="row navGroup b-nav-group" role="presentation">
+											<div role="presentation" class="b-nav-group__grid grid grid--flush">
+												<div role="presentation" class="1/3 b-nav-group__grid-cell grid__cell">
+													
+													<a data-parent="News &amp; opinion" id="global-navigation-find-an-expert" data-value="Find an expert" role="menuitem" href="https://www.sydney.edu.au/news-opinion/find-an-expert.html" class="global-navigation-find-an-expert b-nav-group__item b-icon-link">
+														<div class="b-nav-group__wrapper b-icon-link__wrapper">
+															<span class="b-link b-nav-group__link-text b-icon-link__text b-text--colour-dark b-nav-group__item-text ">Find an expert</span>
+															<i class="b-icon-link__icon b-icon b-icon--red b-icon--right-arrow b-pull-right--fixed b-nav-group__item-icon"></i>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
+									
+								</div>
+								
+							</div>
+						
+					</div>
+					<div class="navSearch" role="search">
+						<a href="#" class="searchIcon" aria-label="Search for courses, topics, events and everything else..." tabindex="1"><span class="glyphicon glyphicon-search"></span></a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>  
+ 
+
+			
+
+			<div class="hidden-xs hidden-sm">
+    
+</div>
+		</div>
+	</div>
+</div>
+<!--endnoindex-->
+
+    <h1 class="sr-only" tabindex="-1" id="content">Home - The University of Sydney</h1>
+
+    <div class="bodyContentContainer">
+
+        <div class="darkener"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 fullWidthColumn" id="skip-to-content">
+
+                    
+                    <div>
+
+
+
+
+    
+    
+    <div class="marketing-hero parbase">
+	<div class="marketingHeroModule  ">
+		
+
+
+
+
+<div>
+
+    <div class="b-hero-media b-hero-media--has-video">
+        
+            
+
+    
+        <style>.img9b006a2c{ background-image:url('/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg/jcr:content/renditions/cq5dam.web.440.138.2x.jpeg');background-size: cover;background-position:100.0% 50.0%;}@media (min-width: 320px) { .img9b006a2c{ background-image:url('/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg/jcr:content/renditions/cq5dam.web.800.251.2x.jpeg');}@media (min-width: 992px) { .img9b006a2c{ background-image:url('/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg');}</style>
+        
+        
+            <img src="/etc/designs/default/0.gif" alt="Student experience" class="img9b006a2c b-hero-media__media b-hero-media__media--image"/>
+        
+        
+    
+
+        
+
+        
+            
+            
+            
+            
+
+            
+                
+            
+
+            <video class="b-hero-media__media b-hero-media__media--video" poster="/content/dam/corporate/images/homepage/sem2_enrolment_banner.jpg" style="object-fit: cover;" autoplay loop muted>
+                <source src="/content/dam/corporate/video/hero/banner-june-2020-sem2-student-recruitment.mp4" type="video/mp4"/>
+            </video>
+        
+
+        
+    </div>
+</div>
+
+		<div class="redBox">
+			<h2 class="title">
+				
+     
+         Study with us
+     
+
+			</h2>
+			<div class="strapline">
+				
+				
+     
+         Start online, join us on campus later
+     
+
+				<a href="https://www.sydney.edu.au/study.html" class="b-js-analytics-link callToAction">
+					
+     
+         Find out more
+     
+
+				</a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+    
+    
+    <div class="html-block parbase">
+	
+	
+	<div><style>
+.b-sub-hero{
+	background-color: rgb(54,54,54); color: #fff; padding-top: 20px; padding-bottom: 20px; margin: -25px -10px 10px -10px;  vertical-align:middle;
+}
+
+@media screen and (min-width: 311px) {
+	.b-sub-hero .item-left{
+		margin-left: 15px; margin-bottom:15px; margin-bottom:15px;
+	}
+	
+	.b-sub-hero .item-right{
+		margin-left: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.b-sub-hero{
+		margin:0px -40px 10px -40px;
+	}
+
+	.b-sub-hero .item-left{
+		margin-left: 40px; margin-bottom:15px; display: inline-block; width:410px;
+	}
+	
+	.b-sub-hero .item-right{
+		margin-left: 11px; display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.b-sub-hero{
+		margin: 0px -89px 10px -89px;
+	}
+
+	.b-sub-hero .item-left{
+		width: 619px; margin-left: 88px;
+	}
+
+
+	.b-sub-hero .item-right{
+		
+	}
+}
+
+@media screen and (min-width: 1199px) {
+	.b-sub-hero{
+		margin: -25px -108px 10px -110px;
+	}
+	
+	.b-sub-hero .item-left{
+		width: 755px; margin-left: 110px;
+	}
+
+}
+</style>
+
+<div class="b-sub-hero">
+<div class="item-left"><span><strong>Covid-19 updates: </strong></span>
+<span>Supporting our community</span>
+</div>
+<div class="item-right">
+<a href="https://www.sydney.edu.au/study/coronavirus-infection-university-of-sydney-advice.html"><button class="b-button b-button--primary" type="submit"><span>More information</span> </button></a>
+</div>
+</div>
+</div>
+</div>
+
+
+    
+    
+    <div class="course-finder parbase"><!--noindex-->
+
+    <form method="get" action="https://www.sydney.edu.au/courses/search.html" accept-charset="UTF-8" id="courseFinderForm" name="coursefinderform" role="form" class="b-form ">
+
+        <fieldset>
+            <div class="courseFinderModule summary">
+                <div class="backgroundElement">
+                    <h3 class="b-title b-title--first b-title--h3 b-title--course-finder">Find a course</h3>
+
+                    <div class="inputFields">
+                        <div class="keywordsFieldColumn">
+                            <div class="b-form-control__wrapper">
+
+                                <div class="b-js-input-group b-input-group">
+                                    <div>
+                                        <label class="sr-only" for="b-js-search-form-keywords">Type keywords </label>
+                                        <input required="required" id="b-js-search-form-keywords" name="keywords" type="text" class="b-component--tightest b-text-input b-input-group__control" data-required="true" placeholder="Search for courses"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="search-type" value="course" class="" readonly/>
+
+                    <div class="submitAndLinks">
+                        <div class="searchButtonColumn b-form__button-group">
+                            <button class="b-button b-button--primary " type="submit">
+                                <span>Search</span>
+                                <i class="b-icon b-icon--search b-icon--side-right"></i>
+                            </button>
+                        </div>
+                        <div class="coursesColumn">
+                            <div class="courses">
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+<!--endnoindex-->
+</div>
+
+
+</div>
+                    
+                    <div>
+
+
+
+
+    
+    
+    <div class="signposts parbase">
+
+	<div class="signpostsModule clearfix " id="signposts">
+
+		<div class="topRow clearfix">
+			<div class="leftColumn">
+				<div class="backgroundContainer" style="background-image:url(/dam/corporate/images/homepage/studyWithUsImage.png/_jcr_content/renditions/cq5dam.web.440.383.2x.jpeg);background-size: cover;background-position:50.0% 50.0%;">
+
+					<a href="https://www.sydney.edu.au/study.html" class="signpostItem">
+						<div class="processMark"></div>
+						<div class="title">
+     
+         Study with us
+     
+</div>
+						<div class="strapline">
+     
+         Find your pathway 
+     
+</div>
+						<div class="arrow">
+
+
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="rightColumn">
+				<a href="https://www.sydney.edu.au/engage/industry-business-partnerships.html" class="signpostItem">
+					<div class="processMark"></div>
+					<div class="title">
+     
+         Collaborate with us
+     
+</div>
+					<div class="strapline">
+     
+         Work with our researchers to tackle wicked problems
+
+     
+</div>
+					<div class="arrow"></div>
+				</a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="middleRowBackground">
+			<div class="middleRow clearfix">
+				<div class="leftColumn">
+					<a href="https://www.sydney.edu.au/engage/alumni.html" class="signpostItem">
+						<div class="processMark"></div>
+						<div class="title">
+     
+         Alumni
+     
+</div>
+						<div class="strapline">
+     
+         News, events and volunteer opportunities
+     
+</div>
+						<div class="arrow"></div>
+					</a>
+				</div>
+				<div class="rightColumn">
+					<div class="imageContainer">
+						
+
+    
+        <style>.imgcfb2d9ab{ background-image:url('/content/dam/corporate/images/homepage/stairs.png/jcr:content/renditions/cq5dam.web.440.269.2x.jpeg');background-size: cover;background-position:50.0% 50.0%;}@media (min-width: 320px) { .imgcfb2d9ab{ background-image:url('/content/dam/corporate/images/homepage/stairs.png/jcr:content/renditions/cq5dam.web.800.489.2x.jpeg');}</style>
+        
+            <img src="/etc/designs/default/0.gif" alt="" class="imgcfb2d9ab midRightImage"/>
+        
+        
+        
+    
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bottomRowBackground">
+			<div class="bottomRow clearfix">
+				<div class="leftColumn">
+					<div class="signpostVideoItem">
+						<div class="contentType">
+							
+							University_
+						</div>
+						<div class="video">
+							<iframe id="player_1" src="//player.vimeo.com/video/134792979?title=0&api=1&player_id=player_1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							
+						</div>
+						<div class="videoTitle">
+     
+         Explore our university in 360°
+     
+</div>
+						<div class="videoStrapline">
+							<span class="glyphicon glyphicon-triangle-top"></span>
+
+							
+     
+         <p><a href="http://tour.sydney.edu.au" target="_blank">See our campus through a student’s eyes.</a></p>
+
+     
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="rightColumn">
+					<div class="signpostTileItem">
+						<div class="contentType">
+							
+							Event_
+						</div>
+						<a href="https://www.sydney.edu.au/study/events-for-prospective-students/undergraduate.html" class="signpostCTA">
+							<div class="blackProcessMark"></div>
+							<div class="whiteProcessMark"></div>
+							<div class="title">
+     
+         Online Open Night
+     
+</div>
+							<div class="strapline">
+     
+         Start your journey to Sydney
+     
+</div>
+						</a>
+
+						<div class="tileStrapline">
+							<span class="glyphicon glyphicon-triangle-top"></span>
+
+							
+     
+         Get advice on our undergraduate courses, chat to current students and experience a range of webinars at one of our Online Open Nights on 9 and 10 September.
+     
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+                    
+                    <div>
+
+
+
+
+    
+    
+    <div class="featured-article-list parbase">
+
+
+
+<div>
+
+    
+    <div class="b-component-title">
+        <h3 class="b-component-title__title b-title b-title--first pull-left">
+            
+     
+         News &amp; opinion
+     
+
+        </h3>
+        
+        <div class="clearfix"></div>
+    </div>
+
+
+    
+    
+
+    
+    
+
+        
+            
+
+
+
+
+<div class="b-js-featured-article-carousel b-featured-article-carousel b-component" data-fullsize-state-class="b-featured-article-carousel--full-size">
+
+    <div class="b-swiper-carousel b-js-swiper-carousel" data-loop="false" data-responsive="true" data-enable-hint-style="true" data-button-group-state-class="b-featured-article-carousel--has-nav-buttons">
+
+        
+        <div class="b-js-swiper-carousel-container b-swiper-carousel__container swiper-container">
+            <div class="swiper-wrapper b-swiper-carousel__wrapper">
+
+                
+                <div class="swiper-slide b-swiper-carousel__slide b-js-swiper-carousel-slide b-swiper-carousel__slide--thumb
+                            b-featured-article-carousel__slide b-featured-article-carousel__slide--first">
+
+                    
+                    
+
+                        
+
+                        
+                        
+                            
+                            
+                                
+
+
+
+
+
+
+
+    
+        
+        
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        
+
+   <a class="b-featured-article b-featured-article-list-feed b-fact-tile__link" role="presentation" href="https://www.sydney.edu.au/news-opinion/news/2020/08/05/kids-say-they-are-not-addicted-to-games.html">
+
+        <div class="b-rule--heavier-top b-component--tight"></div>
+
+        <div role="presentation" class="b-image-link">
+
+            <div class="b-text--font-label b-text--colour-dark b-component--md-tighter
+                        b-featured-article__content-type b-featured-article__content-type--no-padding">News_</div>
+
+            <div class="b-text--font-label b-text--colour-dark b-text--size-base">05 August 2020</div>
+
+            <figure class="b-figure b-image-link__image-holder b-component--md-tighter">
+
+                
+                
+
+    
+        <style>.img0953c7a0{ background-image:url('/content/dam/corporate/images/news-and-opinion/news/2020/august/fortnite-gamer-pixabay.jpg/jcr:content/renditions/cq5dam.web.440.293.2x.jpeg');background-size: cover;background-position:0.0% 50.0%;}@media (min-width: 320px) { .img0953c7a0{ background-image:url('/content/dam/corporate/images/news-and-opinion/news/2020/august/fortnite-gamer-pixabay.jpg/jcr:content/renditions/cq5dam.web.800.533.2x.jpeg');}</style>
+        
+        
+            <img src="/etc/designs/default/0.gif" alt="Photo of a boy holding up his game" class="img0953c7a0 b-figure__image b-figure__image--ratio-4-3"/>
+        
+        
+    
+
+
+                <div class="b-image-link__cover b-image-link__cover--topdown"></div>
+                <div class="b-image-link__square b-image-link__square--small
+                            b-image-link__square--secondary b-hidden--tablet-up">
+                    <span class="b-icon b-icon--right-arrow"></span>
+                </div>
+
+            </figure>
+
+            <div class="b-rule--light-bottom"></div>
+
+            <div class="b-text--colour-dark">
+                
+                <h3 class="b-featured-article__title b-featured-article-list-feed__title">
+     
+         &quot;I'm not addicted!&quot; Kids have a right to play - even digitally
+     
+</h3>
+
+                
+                <div class="b-text b-component--tight">Children adopt the word &quot;addicted&quot; to describe a game as fun or to say how long they played it. But adults use it as a pathology - and that can harm kids. </div>
+
+                
+
+
+            </div>
+
+            <i class="b-icon b-icon--right-arrow b-text--colour-red "></i>
+
+        </div>
+
+    </a>
+
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+                            
+                        
+                    
+
+                    
+                    
+
+                </div>
+            
+
+                
+                <div class="swiper-slide b-swiper-carousel__slide b-js-swiper-carousel-slide b-swiper-carousel__slide--thumb
+                            b-featured-article-carousel__slide ">
+
+                    
+                    
+
+                        
+
+                        
+                        
+                            
+                            
+                                
+
+
+
+
+
+
+
+    
+        
+        
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        
+
+   <a class="b-featured-article b-featured-article-list-feed b-fact-tile__link" role="presentation" href="https://www.sydney.edu.au/news-opinion/news/2020/08/04/covid-19-study-confirms-low-transmission-in-educational-settings.html">
+
+        <div class="b-rule--heavier-top b-component--tight"></div>
+
+        <div role="presentation" class="b-image-link">
+
+            <div class="b-text--font-label b-text--colour-dark b-component--md-tighter
+                        b-featured-article__content-type b-featured-article__content-type--no-padding">News_</div>
+
+            <div class="b-text--font-label b-text--colour-dark b-text--size-base">04 August 2020</div>
+
+            <figure class="b-figure b-image-link__image-holder b-component--md-tighter">
+
+                
+                
+
+    
+        <style>.img1e201280{ background-image:url('/content/dam/corporate/images/news-and-opinion/news/2017/january/Students-maths-iStock.jpg/jcr:content/renditions/cq5dam.web.440.294.2x.jpeg');background-size: cover;background-position:50.0% 50.0%;}@media (min-width: 320px) { .img1e201280{ background-image:url('/content/dam/corporate/images/news-and-opinion/news/2017/january/Students-maths-iStock.jpg/jcr:content/renditions/cq5dam.web.800.533.2x.jpeg');}</style>
+        
+            <img src="/etc/designs/default/0.gif" alt="" class="img1e201280 b-figure__image b-figure__image--ratio-4-3"/>
+        
+        
+        
+    
+
+
+                <div class="b-image-link__cover b-image-link__cover--topdown"></div>
+                <div class="b-image-link__square b-image-link__square--small
+                            b-image-link__square--secondary b-hidden--tablet-up">
+                    <span class="b-icon b-icon--right-arrow"></span>
+                </div>
+
+            </figure>
+
+            <div class="b-rule--light-bottom"></div>
+
+            <div class="b-text--colour-dark">
+                
+                <h3 class="b-featured-article__title b-featured-article-list-feed__title">
+     
+         COVID-19 study confirms low transmission in educational settings 
+     
+</h3>
+
+                
+                <div class="b-text b-component--tight">New research finds COVID-19 transmission rates in NSW schools and early childcare education and care settings were minimal, particularly between children and from children to adults. </div>
+
+                
+
+
+            </div>
+
+            <i class="b-icon b-icon--right-arrow b-text--colour-red "></i>
+
+        </div>
+
+    </a>
+
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+                            
+                        
+                    
+
+                    
+                    
+
+                </div>
+            
+
+                
+                <div class="swiper-slide b-swiper-carousel__slide b-js-swiper-carousel-slide b-swiper-carousel__slide--thumb
+                            b-featured-article-carousel__slide ">
+
+                    
+                    
+
+                        
+
+                        
+                        
+                            
+                            
+                                
+
+
+
+
+
+
+
+    
+        
+        
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        
+
+   <a class="b-featured-article b-featured-article-list-feed b-fact-tile__link" role="presentation" href="https://www.sydney.edu.au/news-opinion/news/2020/08/04/mental-health-impact-of-lockdown-fatigue-requires-urgent-respons.html">
+
+        <div class="b-rule--heavier-top b-component--tight"></div>
+
+        <div role="presentation" class="b-image-link">
+
+            <div class="b-text--font-label b-text--colour-dark b-component--md-tighter
+                        b-featured-article__content-type b-featured-article__content-type--no-padding">Opinion_</div>
+
+            <div class="b-text--font-label b-text--colour-dark b-text--size-base">04 August 2020</div>
+
+            <figure class="b-figure b-image-link__image-holder b-component--md-tighter">
+
+                
+                
+
+    
+        <style>.img0d37292e{ background-image:url('/content/dam/corporate/images/lambert-initiative/research/fear.jpg/jcr:content/renditions/cq5dam.web.440.138.2x.jpeg');background-size: cover;background-position:50.0% 50.0%;}@media (min-width: 320px) { .img0d37292e{ background-image:url('/content/dam/corporate/images/lambert-initiative/research/fear.jpg/jcr:content/renditions/cq5dam.web.800.250.2x.jpeg');}</style>
+        
+            <img src="/etc/designs/default/0.gif" alt="" class="img0d37292e b-figure__image b-figure__image--ratio-4-3"/>
+        
+        
+        
+    
+
+
+                <div class="b-image-link__cover b-image-link__cover--topdown"></div>
+                <div class="b-image-link__square b-image-link__square--small
+                            b-image-link__square--secondary b-hidden--tablet-up">
+                    <span class="b-icon b-icon--right-arrow"></span>
+                </div>
+
+            </figure>
+
+            <div class="b-rule--light-bottom"></div>
+
+            <div class="b-text--colour-dark">
+                
+                <h3 class="b-featured-article__title b-featured-article-list-feed__title">
+     
+         Mental health impact of 'lockdown fatigue' requires urgent response
+     
+</h3>
+
+                
+                <div class="b-text b-component--tight">Serious concerns are being raised about people's capacity to comply with Victoria's new lockdown orders and the mental health impacts of such prolonged social isolation, writes Professor Ian Hickie.</div>
+
+                
+
+
+            </div>
+
+            <i class="b-icon b-icon--right-arrow b-text--colour-red "></i>
+
+        </div>
+
+    </a>
+
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+                            
+                        
+                    
+
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+
+<a class="b-featured-article-carousel__button-next b-swiper-carousel__button b-swiper-carousel__button--next
+            b-link--block b-link--no-underline b-js-swiper-carousel-button-next " href="javascript:void(0)">
+    <div class="b-position__container--vertical">
+        <div class="b-position__content">
+            <span class="b-icon b-icon--right-chevron b-icon--dark b-featured-article-carousel__nav-icon"></span>
+        </div>
+        <span class="sr-only">next slide</span>
+    </div>
+</a>
+
+
+<a class="b-featured-article-carousel__button-prev b-swiper-carousel__button b-swiper-carousel__button--prev
+            b-link--block b-link--no-underline b-js-swiper-carousel-button-prev " href="javascript:void(0)">
+    <div class="b-position__container--vertical">
+        <div class="b-position__content">
+            <span class="b-icon b-icon--left-chevron b-icon--dark b-featured-article-carousel__nav-icon"></span>
+        </div>
+        <span class="sr-only">previous slide</span>
+    </div>
+</a>
+
+    </div>
+</div>
+
+        
+        
+        
+
+        
+        
+    
+
+    <div class="clearfix"></div>
+</div>
+</div>
+
+
+    
+    
+    <div class="content-container b-single-column">
+
+
+
+	<div class="richTextModule b-single-column__container">
+		
+		
+			<p style="text-align: center;font-family: Antwerp;"> </p>
+<p style="text-align: center;font-family: Antwerp;"><em><a href="https://sydney.edu.au/about-us/vision-and-values/aboriginal-and-torres-strait-islander-participation.html">We acknowledge the tradition of custodianship and law of the Country on which the University of Sydney campuses stand. We pay our respects to those who have cared and continue to care for Country.</a></em></p>
+
+		
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="globalFooterZone">
+    <div>
+    
+    
+    
+    
+        <!--noindex-->
+
+
+    <div class="b-js-footer b-footer b-box--red">
+        <div class="b-footer__section-container b-footer__wrapper">
+
+            
+            <div class="b-crop-mark b-crop-mark--vertical b-crop-mark--heavy b-component--tiny-left b-component--md-loose"></div>
+
+            <div class="grid grid--flush">
+                
+                <div class="1/3--tablet-up grid__cell">
+                    <img class="b-footer__logo" alt="University of Sydney" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/USydLogoBlack.svg" onerror="this.src='/etc/designs/corporate/img/USydLogoBlack.png';this.onerror=null;"/>
+                </div>
+
+                
+                <div class="2/3--tablet-up grid__cell">
+                    <div class="b-footer__title b-text--colour-light b-quote b-pull-left--fixed">Leadership for good starts here</div>
+                    <div class="b-footer__crop-mark b-footer__crop-mark--horizontal b-pull-right--fixed b-crop-mark b-crop-mark--horizontal b-crop-mark--light b-crop-mark--heavy"></div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        
+        <div class="b-footer__section-container">
+
+            <div class="grid grid--flush">
+
+                <div class="11/12--tablet-up grid__cell b-pull-right--sm ">
+                    
+                    <div class="b-text--colour-dark grid grid--right">
+                        
+                            <div class="3/11--tablet-up 1/2 grid__cell">
+
+                                <h2 class="b-footer__sub-title b-title b-title--first b-component--tight">Media</h2>
+
+                                <ul class="b-list-group b-list-group--no-padding b-footer__wrapper">
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/news-opinion/news.html">News</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/news-opinion/find-an-expert.html">Find an expert</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/news-opinion/media-contacts.html">Media contacts</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        
+                            <div class="3/11--tablet-up 1/2 grid__cell">
+
+                                <h2 class="b-footer__sub-title b-title b-title--first b-component--tight">Student links</h2>
+
+                                <ul class="b-list-group b-list-group--no-padding b-footer__wrapper">
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/students/log-in-to-university-systems.html">How to log in to University systems</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/students/key-dates.html">Key dates</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/students/timetables.html">Class timetables</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/policies/">Policies</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        
+                            <div class="3/11--tablet-up 1/2 grid__cell">
+
+                                <h2 class="b-footer__sub-title b-title b-title--first b-component--tight">About us</h2>
+
+                                <ul class="b-list-group b-list-group--no-padding b-footer__wrapper">
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/our-world-rankings.html">Our rankings</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/faculties-and-schools.html">Faculties and schools</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/research/centres.html">Centres and institutes</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/campuses/campus-locations.html">Campus locations</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        
+                            <div class="2/11--tablet-up 1/2 grid__cell">
+
+                                <h2 class="b-footer__sub-title b-title b-title--first b-component--tight">Connect</h2>
+
+                                <ul class="b-list-group b-list-group--no-padding b-footer__wrapper">
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/contact-us.html">Contact us</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/governance-and-structure/staff-directory.html">Find a staff member</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/careers-at-sydney.html">Careers at Sydney</a>
+                                    </li>
+                                
+                                    <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border">
+                                        <a class="b-link b-link--colour-dark b-text--size-small b-text--bold b-link--hover-underline" href="https://www.sydney.edu.au/about-us/campuses/emergencies-and-personal-safety.html">Emergencies and personal safety</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        
+                    </div>
+
+                    <div class="grid grid--flush b-footer__figure-container">
+                        <figure class="3/12--tablet-up grid__cell b-figure">
+
+                        </figure>
+                        <div class="9/12--tablet-up grid__cell">
+
+                            <div class="grid grid--right b-pull-left--tablet-down">
+
+                                <figure class="1/3--mobile-up 1/3--tablet-up 4/12--tablet-up 3/12--sm-desk-up grid__cell b-figure b-position__groupEight">
+
+                                    <div>
+                                        <span class="b-title b-component--tight b-footer__member-text">Member of</span>
+                                    </div>
+                                    <a href="https://go8.edu.au/"><img alt="Group Of Eight" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/groupOfEight.png" class="b-footer__figure-image b-footer__figure-image--secondary"/></a>
+                                </figure>
+
+                                <figure class="1/3--mobile-up 1/3--tablet-up 4/12--tablet-up 3/12--sm-desk-up grid__cell b-figure">
+                                    <a href="https://apru.org/"><img alt="APRU" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/APRU.png" class="b-footer__figure-image b-footer__figure-image--secondary"/></a>
+                                </figure>
+
+                                <figure class="1/3--mobile-up 1/3--tablet-up 4/12--tablet-up 3/12--sm-desk-up grid__cell b-figure">
+                                    <a href="https://www.sydney.edu.au/about-us/vision-and-values/diversity/gender-equity.html#sage"><img alt="Athena Swan member" src="/etc/designs/corporate-commons/node_modules/corporate-frontend/dist/assets/img/athenaSwan.png" class="b-footer__figure-image b-footer__figure-image--secondary"/></a>
+                                </figure>
+                            </div>
+
+                            <!--<div class="clearfix"></div>-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="1/12--tablet-up 1/2 grid__cell b-pull-left--sm">
+                    <div class="grid">
+
+                        <div class="2/12--tablet-down 2/2--tablet-up grid__cell">
+                            <a href="https://twitter.com/sydney_uni" class="b-link b-link--colour-dark b-link--block b-footer__social-link b-link--hover-underline" title="University of Sydney Twitter">
+                                <i class="b-icon b-icon--align-top b-component--md-tighter b-icon--social-media b-icon--twitter"></i>
+                                <span class="sr-only">University of Sydney Twitter </span>
+                            </a>
+                            <a href="https://www.facebook.com/sydneyuni" class="b-link b-link--colour-dark b-link--block b-footer__social-link b-link--hover-underline" title="University of Sydney Facebook">
+                                <i class="b-icon b-icon--align-top b-component--md-tighter b-icon--social-media b-icon--facebook"></i>
+                                <span class="sr-only" aria-hidden="true">University of Sydney Facebook </span>
+                            </a>
+                            <a href="https://instagram.com/sydney_uni/" class="b-link b-link--colour-dark b-link--block b-footer__social-link b-link--hover-underline" title="University of Sydney Instagram">
+                                <i class="b-icon b-icon--align-top b-component--md-tighter b-icon--social-media b-icon--instagram"></i>
+                                <span class="sr-only" aria-hidden="true">University of Sydney Instagram </span>
+                            </a>
+                            <a href="https://www.youtube.com/user/uniofsydney" class="b-link b-link--colour-dark b-link--block b-footer__social-link b-link--hover-underline" title="University of Sydney Youtube ">
+                                <i class="b-icon b-icon--align-top b-component--md-tighter b-icon--social-media b-icon--youtube"></i>
+                                <span class="sr-only" aria-hidden="true">University of Sydney Youtube </span>
+                            </a>
+                        </div>
+
+                        <div class="2/12--tablet-down 2/2--tablet-up grid__cell b-pull-left--tablet-down">
+                            <div class="b-text--colour-dark b-text--font-label b-text--nowrap b-text--vertical">Follow us_</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="clearfix hidden-xs"></div>
+
+
+                <div class="1/12--tablet-up grid__cell hidden-xs"></div>
+                <div class="9/12--tablet-up 1/2 grid__cell">
+                    <div class="grid grid--flush">
+                        <div class="b-box--padding-sm-top 11/12--tablet-up grid__cell">
+
+                            <ul class="b-list-group b-list-group--no-padding ">
+
+                                <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border b-component--md-tighter">
+                                    <a class="b-footer__bottom-link b-link b-link--colour-dark b-text--font-label b-link--hover-underline" href="https://www.sydney.edu.au/disclaimer.html">Disclaimer</a>
+                                </li>
+                            
+
+                                <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border b-component--md-tighter">
+                                    <a class="b-footer__bottom-link b-link b-link--colour-dark b-text--font-label b-link--hover-underline" href="https://www.sydney.edu.au/privacy-statement.html">Privacy</a>
+                                </li>
+                            
+
+                                <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border b-component--md-tighter">
+                                    <a class="b-footer__bottom-link b-link b-link--colour-dark b-text--font-label b-link--hover-underline" href="https://www.sydney.edu.au/accessibility.html">Accessibility</a>
+                                </li>
+                            
+
+                                <li class="b-footer__list-item b-list-group__item b-list-group__item--no-border b-component--md-tighter">
+                                    <a class="b-footer__bottom-link b-link b-link--colour-dark b-text--font-label b-link--hover-underline" href="https://www.sydney.edu.au/website-feedback.html">Website feedback</a>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="2/12--tablet-up grid__cell">
+                    <div class="b-box--padding-sm-top b-footer__abn-section b-text--colour-dark b-text--size-small">
+                        <div class="b-footer__abn-text b-text--font-label">
+                            ABN: 15 211 513 464
+                        </div>
+                        <div class="b-footer__abn-text b-text--font-label">
+                            CRICOS Number: 00026A
+                        </div>
+                        <div class="b-footer__abn-text b-text--font-label">
+                            TEQSA: PRV12057
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+<!--endnoindex-->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+</div>
+
+    
+        <!-- build: jenkins-Build and deploy usyd-commons to Stage64-18
+jenkins-Build aem-corporate and deploy to TRAIN64-9
+ -->
+    
+</div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript" src="/etc/designs/corporate-commons/clientlibs/frontend-js.7607b394afdd7ac19703fc07c2e167b0.js"></script>
+
+
+
+<div class="cloudservice addthis">
+
+    <script>
+        var addthis_config = {
+            "ui_click": true,
+            "ui_508_compliant": false,
+            "services_exclude": "print"
+        };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56cd1d2d1a614c77" async="async"></script>
+
+</div>
+
+
+</body>
+</html>
